@@ -1,0 +1,22 @@
+.projBtn {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 28vw;
+    height: 21vw;
+    border: 4px black solid;
+    border-radius: 2px;
+    cursor: pointer;
+    filter: brightness(100%);
+    transition: 0.15s;
+    margin: 0.75vw;
+    z-index: 0;
+}
+
+.projBtn:hover {
+    filter: brightness(50%);
+    margin: -0.25vw;
+    width: 30vw;
+    height: 22.5vw;
+    z-index: 400;
+}
