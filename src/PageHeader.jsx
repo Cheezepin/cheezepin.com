@@ -1,5 +1,5 @@
 import siteLogo from './assets/header/logo.png'
-// import './PageHeader.css'
+import './PageHeader.css'
 
 import Navbar from "./components/Navbar";
 
@@ -25,7 +25,7 @@ import OvDc from './components/overlays/OvDc';
 function PageHeader() {
   return (
     <>
-      <img src={siteLogo}></img>
+      <img src={siteLogo} class="centerHeader"></img>
 
       <Router>
           <InsideRouter/>

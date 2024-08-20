@@ -21,7 +21,9 @@ const Home = () => {
         <DogCollabBanner/>
         <Break h = "50px"/>
 
-        <iframe width="960vh" height="540vh" src="https://www.youtube.com/embed/RQ4kvmQAZD8" style={{verticalAlign: "middle", display: "block", marginLeft: "auto", marginRight: "auto"}} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        {/* <div class="bigVideoContainer"> */}
+          <iframe /*width="960vh" height="540vh"*/ src="https://www.youtube.com/embed/RQ4kvmQAZD8" class="bigVideo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+        {/* </div> */}
 
         <a style={{textAlign: "center", fontSize: "60px"}} href="https://romhacking.com/hack/Dog-Collab"><h2>Download here!</h2></a>
 

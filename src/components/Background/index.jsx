@@ -6,6 +6,8 @@ const GlobalStyle = createGlobalStyle`
     background: url(${bgimg});
     margin = 0;
     padding = 0;
+    overflow-x:clip;
+    width:100%;
   }
 `
 

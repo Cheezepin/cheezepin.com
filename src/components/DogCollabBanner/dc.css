@@ -1,6 +1,9 @@
 .dc_container {
-    width: 100;
+    width: 100%;
     overflow: hidden;
+    @media screen and (max-width: 768px) {
+        height:auto;
+    }
 }
 
 .dc {
@@ -8,6 +11,10 @@
     background-size:2000px;
     background-repeat: repeat-x;
     animation: slide 10s linear infinite;
+
+    @media screen and (max-width: 768px) {
+        background-size: 160%;
+    }
 }
 
 @keyframes slide {
@@ -21,4 +28,8 @@
 
 .dctext {
     height: 500px;
+    @media screen and (max-width: 768px) {
+        height: auto;
+        width: 80%;
+    }
 }

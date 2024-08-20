@@ -1,7 +1,7 @@
 import React from 'react';
 import AnimatedPage from "./AnimatedPage";
 import Ononoki from '/src/components/Ononoki';
-import "./pages.css";
+// import "./pages.css";
 
 const About = () => {
   return (
