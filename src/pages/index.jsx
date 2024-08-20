@@ -44,7 +44,7 @@ const Home = () => {
           blurb = {"Collect over 70 stars in over 10 levels crafted by established ROM hackers, with all sorts of custom mechanics and gimmicks!"}
         />
 
-        <p style={{fontSize:"36px"}}>Check out my <a href="projects">other projects!</a></p>
+        <p style={{fontSize:"36px"}}>Check out my <a href="/#/projects">other projects!</a></p>
       </div>
     </AnimatedPage>
   );

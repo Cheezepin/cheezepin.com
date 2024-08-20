@@ -4,7 +4,7 @@ import siteLogo from './assets/header/logo.png'
 import Navbar from "./components/Navbar";
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Routes,
   Route,
   useLocation

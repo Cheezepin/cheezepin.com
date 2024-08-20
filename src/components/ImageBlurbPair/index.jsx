@@ -2,7 +2,7 @@ import React from "react";
 import "./blurbpair.css"
 
 const ImageBlurbPair = ({imgSide, imgPath, header, blurb}) => {
-    var image = "src/assets/" + imgPath;
+    var image = imgPath;
     if(imgSide == "l") {
         return (
             <div class="dcblurbcontainer">

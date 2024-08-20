@@ -2,7 +2,7 @@ import React from 'react';
 import Ov from './Ov';
 import "./overlays.css"
 
-import bg from "/src/assets/projects/dc/bg.png"
+import bg from "/projects/dc/bg.png"
 
 class OvDc extends Ov {
   render() {
@@ -25,7 +25,7 @@ class OvDc extends Ov {
               <p>Level design by Ashley, MrComit, someone2639, Cheezepin, BeverlyBean, Rovert, CowQuack, KeyBlader, an_unidentified_emu, Yoshi Milkman, Fazana, and thecozies</p>
             </div>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/dc/dcm1.png" style={{width:"300px"}}></img>
+              <img src="/projects/dc/dcm1.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
@@ -33,7 +33,7 @@ class OvDc extends Ov {
 
           <div style={{display:"flex"}}>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/dc/dcm2.png" style={{width:"300px"}}></img>
+              <img src="/projects/dc/dcm2.png" style={{width:"300px"}}></img>
             </div>
             <div style={{width:"60%"}}>
               <p>Bowser has taken Peach again, but in this evolution of classic Mario 64, you'll have to travel the whole world to get her back! Your trusty pet dog will accompany you in every level. He can dig up treasure, open doors, give you a ride, and much more! Collect over 70 stars in over 10 levels crafted by established ROM hackers, with all sorts of custom mechanics and gimmicks!</p>
@@ -42,11 +42,11 @@ class OvDc extends Ov {
 
           <h2>GALLERY</h2>
           <div style={{display:"flex", overflowX:"scroll", overflowY:"clip", height: "400px", marginBottom:"50px"}}>
-            <img class="galleryImg" src="/src/assets/projects/dc/gallery/1.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/dc/gallery/2.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/dc/gallery/3.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/dc/gallery/4.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/dc/gallery/5.png"></img>
+            <img class="galleryImg" src="/projects/dc/gallery/1.png"></img>
+            <img class="galleryImg" src="/projects/dc/gallery/2.png"></img>
+            <img class="galleryImg" src="/projects/dc/gallery/3.png"></img>
+            <img class="galleryImg" src="/projects/dc/gallery/4.png"></img>
+            <img class="galleryImg" src="/projects/dc/gallery/5.png"></img>
           </div>
         </div>
     );

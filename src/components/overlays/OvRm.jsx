@@ -2,7 +2,7 @@ import React from 'react';
 import Ov from './Ov';
 import "./overlays.css"
 
-// import bg from "/src/assets/projects/rm/bg.png"
+// import bg from "/projects/rm/bg.png"
 
 export default class OvRm extends Ov {
   render() {
@@ -25,7 +25,7 @@ export default class OvRm extends Ov {
               <p>Winner of the RHDC Music Hacks Competition</p>
             </div>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/rm/render1.png" style={{width:"300px"}}></img>
+              <img src="/projects/rm/render1.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
@@ -33,7 +33,7 @@ export default class OvRm extends Ov {
 
           <div style={{display:"flex"}}>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/rm/render2.png" style={{width:"300px"}}></img>
+              <img src="/projects/rm/render2.png" style={{width:"300px"}}></img>
             </div>
             <div style={{width:"60%"}}>
               <p>DJ Bowser and his cronies have stolen Peach yet again, and it's up to Mario to stop him. With E. Gadd's new Ultra-Note-Display 3000, he can preview all the enemies coming his way in three musical worlds. Dodge and weave all sorts of traps and complete fun missions on your way to stop DJ Bowser in this bullethell rhythm-game platformer hybrid!</p>
@@ -42,11 +42,11 @@ export default class OvRm extends Ov {
 
           <h2>GALLERY</h2>
           <div style={{display:"flex", overflowX:"scroll", overflowY:"clip", height: "400px", marginBottom:"50px"}}>
-            <img class="galleryImg" src="/src/assets/projects/rm/gallery/1.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/rm/gallery/2.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/rm/gallery/3.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/rm/gallery/4.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/rm/gallery/5.png"></img>
+            <img class="galleryImg" src="/projects/rm/gallery/1.png"></img>
+            <img class="galleryImg" src="/projects/rm/gallery/2.png"></img>
+            <img class="galleryImg" src="/projects/rm/gallery/3.png"></img>
+            <img class="galleryImg" src="/projects/rm/gallery/4.png"></img>
+            <img class="galleryImg" src="/projects/rm/gallery/5.png"></img>
           </div>
         </div>
     );

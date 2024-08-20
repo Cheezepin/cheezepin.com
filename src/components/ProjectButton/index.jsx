@@ -19,7 +19,7 @@ export default class ProjectButton extends Component {
     render() {
       const styles = {
         containerStyle: {
-            backgroundImage: `url("/src/assets/projects/${this.props.imgPath}.png"), url("/src/assets/projects/${this.props.bgPath}.png"), linear-gradient(rgb(67, 126, 204), rgb(49, 95, 155))`,
+            backgroundImage: `url("/projects/${this.props.imgPath}.png"), url("/projects/${this.props.bgPath}.png"), linear-gradient(rgb(67, 126, 204), rgb(49, 95, 155))`,
         }
       };
 

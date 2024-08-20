@@ -3,7 +3,7 @@ import AnimatedPage from "../../pages/AnimatedPage";
 import Ononoki from '/src/components/Ononoki';
 import "./overlays.css"
 
-import bg from "/src/assets/projects/yctf/bg.png"
+import bg from "/projects/yctf/bg.png"
 
 import Ov from './Ov';
 
@@ -25,7 +25,7 @@ class OvYctf extends Ov {
               <p>Character models by Janja, level model improvements by Aeza, music by various contributors</p>
             </div>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/yctf/render.png" style={{width:"300px"}}></img>
+              <img src="/projects/yctf/render.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
@@ -33,7 +33,7 @@ class OvYctf extends Ov {
 
           <div style={{display:"flex"}}>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/yctf/render2.png" style={{width:"300px"}}></img>
+              <img src="/projects/yctf/render2.png" style={{width:"300px"}}></img>
             </div>
             <div style={{width:"60%"}}>
               <p>Yoshi's despicable habits have caught up to him, and now he's on the run from the IRS. Collect stars using Yoshi's abilities in a modernized Mario world while you unravel the mystery of the IRS' true intentions.</p>
@@ -45,13 +45,13 @@ class OvYctf extends Ov {
               <p>This mod will contain 70 unique stars placed in over ten riveting stages, from dense forests to ginormous metrpolises. Yoshi can flutter jump, eat enemies, and shoot eggs like usual, but is now equipped with three new situational abilities: the Blimp Fruit to reach staggering new heights, the Poochy Whistle to summon his furry friend and cross dangerous lengths at top-speed, and the Stand Arrow to unleash his inner potential and wreak havoc on not just enemies but time itself.</p>
             </div>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/yctf/render3.png" style={{width:"300px"}}></img>
+              <img src="/projects/yctf/render3.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
           <div style={{display:"flex"}}>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/yctf/render4.png" style={{width:"300px"}}></img>
+              <img src="/projects/yctf/render4.png" style={{width:"300px"}}></img>
             </div>
             <div style={{width:"60%"}}>
               <p>Yoshi's allies will also take center stage, with friends like Wario and Kirby helping him move through tough areas, and even letting you harness their familiar abilities in certain areas.</p>
@@ -60,10 +60,10 @@ class OvYctf extends Ov {
 
           <h2>GALLERY</h2>
           <div style={{display:"flex", overflowX:"scroll", overflowY:"clip", height: "400px", marginBottom:"50px"}}>
-            <img /*onClick={() => {this.fuck(this.props.setOverlay)}}*/ class="galleryImg" src="/src/assets/projects/yctf/gallery/1.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/yctf/gallery/2.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/yctf/gallery/3.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/yctf/gallery/4.png"></img>
+            <img /*onClick={() => {this.fuck(this.props.setOverlay)}}*/ class="galleryImg" src="/projects/yctf/gallery/1.png"></img>
+            <img class="galleryImg" src="/projects/yctf/gallery/2.png"></img>
+            <img class="galleryImg" src="/projects/yctf/gallery/3.png"></img>
+            <img class="galleryImg" src="/projects/yctf/gallery/4.png"></img>
           </div>
         </div>
     );

@@ -2,7 +2,7 @@ import React from 'react';
 import Ov from './Ov';
 import "./overlays.css"
 
-// import bg from "/src/assets/projects/gs/bg.png"
+// import bg from "/projects/gs/bg.png"
 
 export default class OvHth extends Ov {
   render() {
@@ -26,7 +26,7 @@ export default class OvHth extends Ov {
               <p>3rd place in the RHDC Zelda Hacks competition</p>
             </div>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/hth/render1.png" style={{width:"300px"}}></img>
+              <img src="/projects/hth/render1.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
@@ -34,7 +34,7 @@ export default class OvHth extends Ov {
 
           <div style={{display:"flex"}}>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/hth/render2.png" style={{width:"300px"}}></img>
+              <img src="/projects/hth/render2.png" style={{width:"300px"}}></img>
             </div>
             <div style={{width:"60%"}}>
               <p>At Peach's request, Mario explores a hole in the Mushroom Kingdom that leads straight to Hyrule. With the help of the fairy Aeros, Mario must find the villain Vaati in his temple and bring peace back to Hyrule. With six items across two dungeons and an overworld, plenty of Zelda mechanics are fleshed out in classic Mario gameplay.</p>
@@ -43,11 +43,11 @@ export default class OvHth extends Ov {
 
           <h2>GALLERY</h2>
           <div style={{display:"flex", overflowX:"scroll", overflowY:"clip", height: "400px", marginBottom:"50px"}}>
-            <img class="galleryImg" src="/src/assets/projects/hth/gallery/1.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/hth/gallery/2.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/hth/gallery/3.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/hth/gallery/4.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/hth/gallery/5.png"></img>
+            <img class="galleryImg" src="/projects/hth/gallery/1.png"></img>
+            <img class="galleryImg" src="/projects/hth/gallery/2.png"></img>
+            <img class="galleryImg" src="/projects/hth/gallery/3.png"></img>
+            <img class="galleryImg" src="/projects/hth/gallery/4.png"></img>
+            <img class="galleryImg" src="/projects/hth/gallery/5.png"></img>
           </div>
         </div>
     );

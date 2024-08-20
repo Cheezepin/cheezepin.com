@@ -2,7 +2,7 @@ import React from 'react';
 import Ov from './Ov';
 import "./overlays.css"
 
-// import bg from "/src/assets/projects/gs/bg.png"
+// import bg from "/projects/gs/bg.png"
 
 export default class OvJm extends Ov {
   render() {
@@ -24,7 +24,7 @@ export default class OvJm extends Ov {
               <p>2nd place in the RHDC Linear Hacks competition</p>
             </div>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/dc/dcm3.png" style={{width:"300px"}}></img>
+              <img src="/projects/dc/dcm3.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
@@ -32,7 +32,7 @@ export default class OvJm extends Ov {
 
           <div style={{display:"flex"}}>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/jm/render1.png" style={{width:"300px"}}></img>
+              <img src="/projects/jm/render1.png" style={{width:"300px"}}></img>
             </div>
             <div style={{width:"60%"}}>
               <p>Mario finds himself at odds with the omniscient, all-powerful Bill Board. With his new ability to spawn signposts as temporary platforms, he must traverse three wacky stages while battling Bill's minions on his way to his space lair.</p>
@@ -41,9 +41,9 @@ export default class OvJm extends Ov {
 
           <h2>GALLERY</h2>
           <div style={{display:"flex", overflowX:"scroll", overflowY:"clip", height: "400px", marginBottom:"50px"}}>
-            <img class="galleryImg" src="/src/assets/projects/jm/gallery/1.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/jm/gallery/2.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/jm/gallery/3.png"></img>
+            <img class="galleryImg" src="/projects/jm/gallery/1.png"></img>
+            <img class="galleryImg" src="/projects/jm/gallery/2.png"></img>
+            <img class="galleryImg" src="/projects/jm/gallery/3.png"></img>
           </div>
         </div>
     );

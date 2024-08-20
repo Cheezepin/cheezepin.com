@@ -2,7 +2,7 @@ import React from 'react';
 import Ov from './Ov';
 import "./overlays.css"
 
-import bg from "/src/assets/projects/gs/bg.png"
+import bg from "/projects/gs/bg.png"
 
 export default class OvGs extends Ov {
   render() {
@@ -26,7 +26,7 @@ export default class OvGs extends Ov {
               <p>Participant in the S_NDBB Media Competition</p>
             </div>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/gs/render1.png" style={{width:"300px"}}></img>
+              <img src="/projects/gs/render1.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
@@ -34,7 +34,7 @@ export default class OvGs extends Ov {
 
           <div style={{display:"flex"}}>
             <div style={{width:"30%"}}>
-              <img src="/src/assets/projects/gs/render2.png" style={{width:"300px"}}></img>
+              <img src="/projects/gs/render2.png" style={{width:"300px"}}></img>
             </div>
             <div style={{width:"60%"}}>
               <p>Mario has landed on King Bob-Omb's island in Neo-Angara, plotting to stop him from harnessing the elemental stars. Joined by three other plumbers, the party must use their magical abilities and pure might to overcome the tower's challenges in a fusion of 3D platforming and traditional RPG battling a la Golden Sun.</p>
@@ -43,11 +43,11 @@ export default class OvGs extends Ov {
 
           <h2>GALLERY</h2>
           <div style={{display:"flex", overflowX:"scroll", overflowY:"clip", height: "400px", marginBottom:"50px"}}>
-            <img class="galleryImg" src="/src/assets/projects/gs/gallery/1.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/gs/gallery/2.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/gs/gallery/3.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/gs/gallery/4.png"></img>
-            <img class="galleryImg" src="/src/assets/projects/gs/gallery/5.png"></img>
+            <img class="galleryImg" src="/projects/gs/gallery/1.png"></img>
+            <img class="galleryImg" src="/projects/gs/gallery/2.png"></img>
+            <img class="galleryImg" src="/projects/gs/gallery/3.png"></img>
+            <img class="galleryImg" src="/projects/gs/gallery/4.png"></img>
+            <img class="galleryImg" src="/projects/gs/gallery/5.png"></img>
           </div>
         </div>
     );
