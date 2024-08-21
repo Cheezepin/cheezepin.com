@@ -11,6 +11,11 @@
     transition: 0.15s;
     margin: 0.75vw;
     z-index: 0;
+
+    @media screen and (max-width: 768px) {
+        width: 90vw;
+        height: 67.5vw;
+    }
 }
 
 .projBtn:hover {
@@ -19,4 +24,10 @@
     width: 30vw;
     height: 22.5vw;
     z-index: 400;
+
+    @media screen and (max-width: 768px) {
+        width: 90vw;
+        height: 67.5vw;
+        margin: 0.75vw;
+    }
 }

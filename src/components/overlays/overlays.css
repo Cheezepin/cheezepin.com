@@ -28,6 +28,12 @@
     /* transform: translate(0, 50px); */
     animation: divComeInFromBottom 0.4s ease-out;
     overflow:scroll;
+
+    @media screen and (max-width: 768px) {
+        border-radius: 0px;
+        margin:0;
+        width:100%;
+    }
 }
 
 @keyframes divFadeIn {
@@ -59,6 +65,10 @@
 
 .overlayDiv h1 {
     text-shadow: white 4px 4px 4px ;
+
+    @media screen and (max-width: 768px) {
+        font-size:60px;
+    }
 }
 
 .overlayDiv h2 {
@@ -66,6 +76,10 @@
     font-family: Acme;
     margin:0;
     text-shadow: white 4px 4px 4px ;
+
+    @media screen and (max-width: 768px) {
+        font-size:40px;
+    }
 }
 
 .overlayDiv p {
