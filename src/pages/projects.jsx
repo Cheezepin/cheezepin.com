@@ -77,7 +77,7 @@ const Projects = () => {
         />
         </div>
 
-        <p>You can find <i>all</i> of my ROM hacks <a href="https://romhacking.com/user/Cheezepin">here</a>.</p>
+        <p style={{fontSize:"36px"}}>You can find <i>all</i> of my ROM hacks <a href="https://romhacking.com/user/Cheezepin">here</a>.</p>
 
 
           {/* <OverlayHandler/> */}
@@ -115,6 +115,7 @@ function ProjectOverlay({overlay, setOverlay}) {
     return (
         <div class="overlayParentDiv">
             {displayedOverlay}
+            <img src="/controls/close.png" class="closeButton"></img>
         </div>
     )
   }

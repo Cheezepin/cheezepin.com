@@ -9,9 +9,17 @@ import {
     useLocation
 } from "react-router-dom";
 
+import siteLogo from '/src/assets/header/logo.png'
+import '/src/PageHeader.css'
+
+import Background from '/src/components/Background'
+
 const Navbar = () => {
+    if(window.location.href.endsWith("resume")) {return;}
     return (
         <>
+            <img src={siteLogo} class="centerHeader"></img>
+            <Background/>
             <Nav>
                 <NavMenu>
                     <NavLink to="/" >

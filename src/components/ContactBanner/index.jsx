@@ -1,11 +1,12 @@
 import React from "react";
+import "./banners.css"
 
 const ContactBanner = ({imgName, color, text, link}) => {
     var path = "/contact/" + imgName + ".png"
     return (
-        <div style={{background: color, borderRadius: "40px", display: "flex", placeContent: "center", maxHeight: "200px", verticalAlign: "middle", width:"auto", margin:"auto"}}>
-            <img style={{aspectRatio: "auto", maxHeight:"140px", padding:"40px"}} src={path}></img>
-            <h2 style={{fontSize:"64px"}}><a href={link}>{text}</a></h2>
+        <div class="contactDiv" style={{background: color}}>
+            <img class="contactImg" src={path}></img>
+            <h2 class="contactText"><a href={link}>{text}</a></h2>
         </div>
     );
 };

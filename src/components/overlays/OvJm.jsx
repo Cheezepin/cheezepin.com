@@ -16,25 +16,25 @@ export default class OvJm extends Ov {
           <iframe class="overlayVideo" width="640px" height="360px" src="https://www.youtube.com/embed/bw28R0aQ7uU?si=hpolwbZZT71BPcL5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
           <h2>INFO</h2>
-          <div style={{display:"flex"}}>
-            <div style={{width:"60%", marginLeft:"5%"}}>
+          <div class="overlayBlurbDiv">
+            <div class="overlayBlurbDivP exMarg">
               <p>Super Mario 64 ROM Hack</p>
               <p>Release Date: Aug. 11th, 2019</p>
               <p>Concept, programming, level design, music transcriptions, writing, modeling by Cheezepin</p>
               <p>2nd place in the RHDC Linear Hacks competition</p>
             </div>
-            <div style={{width:"30%"}}>
+            <div class="overlayBlurbDivImg">
               <img src="/projects/dc/dcm3.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
           <h2>A SIGN-IFICANT CLASSIC CHALLENGE!</h2>
 
-          <div style={{display:"flex"}}>
-            <div style={{width:"30%"}}>
+          <div class="overlayBlurbDiv">
+            <div class="overlayBlurbDivImg">
               <img src="/projects/jm/render1.png" style={{width:"300px"}}></img>
             </div>
-            <div style={{width:"60%"}}>
+            <div class="overlayBlurbDivP">
               <p>Mario finds himself at odds with the omniscient, all-powerful Bill Board. With his new ability to spawn signposts as temporary platforms, he must traverse three wacky stages while battling Bill's minions on his way to his space lair.</p>
             </div>
           </div>

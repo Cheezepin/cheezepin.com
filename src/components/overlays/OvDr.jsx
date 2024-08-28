@@ -16,8 +16,8 @@ export default class OvDr extends Ov {
           <iframe class="overlayVideo" width="640px" height="360px" src="https://www.youtube.com/embed/aka9qFTmXWI?si=wghv4YDKKfHh3Ymo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
           <h2>INFO</h2>
-          <div style={{display:"flex"}}>
-            <div style={{width:"60%", marginLeft:"5%"}}>
+          <div class="overlayBlurbDiv">
+            <div class="overlayBlurbDivP exMarg">
               <p>Super Mario 64 ROM Hack</p>
               <p>Release Date: Jan. 9th, 2020</p>
               <p>Concept, organization, programming, level design, by Cheezepin</p>
@@ -27,18 +27,18 @@ export default class OvDr extends Ov {
               <p>Character models by kurethedead and Daku</p>
               <p>2nd place in the RHDC Mystery Hacks competition</p>
             </div>
-            <div style={{width:"30%"}}>
+            <div class="overlayBlurbDivImg">
               <img src="/projects/dr/render1.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
           <h2>A MYSTERY LOCKED WITHIN THE CASTLE!</h2>
 
-          <div style={{display:"flex"}}>
-            <div style={{width:"30%"}}>
+          <div class="overlayBlurbDiv">
+            <div class="overlayBlurbDivImg">
               <img src="/projects/dr/render2.png" style={{width:"300px"}}></img>
             </div>
-            <div style={{width:"60%"}}>
+            <div class="overlayBlurbDivP">
               <p>Mario wakes up inside Peach's Castle, surrounded by fifteen of the most skilled individuals in the Mushroom Kingdom. With no escape, they learn from the head honcho Monobup they're all part of a killing game, and no one can leave until one person kills another. With tensions running high and discord growing, will Mario and the gang be able to solve the mysteries of the castle--or a murder--and escape?</p>
               <p>NOTE: This is a demo, but plans to finish the story have been discontinued.</p>
             </div>

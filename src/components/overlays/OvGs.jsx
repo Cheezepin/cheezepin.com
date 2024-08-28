@@ -17,26 +17,26 @@ export default class OvGs extends Ov {
           <iframe class="overlayVideo" width="640px" height="360px" src="https://www.youtube.com/embed/zdHEwTVCoo0?si=3ilOPjiVwketVzvC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
           <h2>INFO</h2>
-          <div style={{display:"flex"}}>
-            <div style={{width:"60%", marginLeft:"5%"}}>
+          <div class="overlayBlurbDiv">
+            <div class="overlayBlurbDivP exMarg">
               <p>Super Mario 64 ROM Hack</p>
               <p>Release Date: Apr. 4th, 2021</p>
               <p>Concept, programming, level design, UI design, music transcriptions, manual design by Cheezepin</p>
               <p>Original graphics by Camelot Software, additional art by SPK, logo by HeroTechne</p>
               <p>Participant in the S_NDBB Media Competition</p>
             </div>
-            <div style={{width:"30%"}}>
+            <div class="overlayBlurbDivImg">
               <img src="/projects/gs/render1.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
           <h2>AN RPG SPIN ON CLASSIC SM64!</h2>
 
-          <div style={{display:"flex"}}>
-            <div style={{width:"30%"}}>
+          <div class="overlayBlurbDiv">
+            <div class="overlayBlurbDivImg">
               <img src="/projects/gs/render2.png" style={{width:"300px"}}></img>
             </div>
-            <div style={{width:"60%"}}>
+            <div class="overlayBlurbDivP">
               <p>Mario has landed on King Bob-Omb's island in Neo-Angara, plotting to stop him from harnessing the elemental stars. Joined by three other plumbers, the party must use their magical abilities and pure might to overcome the tower's challenges in a fusion of 3D platforming and traditional RPG battling a la Golden Sun.</p>
             </div>
           </div>

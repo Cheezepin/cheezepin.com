@@ -16,8 +16,8 @@ export default class OvHth extends Ov {
           <iframe class="overlayVideo" width="640px" height="360px" src="https://www.youtube.com/embed/35tsqz0SoJQ?si=cRQYuMyQJ4YtEKOS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
           <h2>INFO</h2>
-          <div style={{display:"flex"}}>
-            <div style={{width:"60%", marginLeft:"5%"}}>
+          <div class="overlayBlurbDiv">
+            <div class="overlayBlurbDivP exMarg">
               <p>Super Mario 64 ROM Hack</p>
               <p>Release Date: Oct. 14th, 2020</p>
               <p>Programming, level design, modeling, writing by Cheezepin</p>
@@ -25,18 +25,18 @@ export default class OvHth extends Ov {
               <p>Music by Thorndust, additional voices by Victuracor</p>
               <p>3rd place in the RHDC Zelda Hacks competition</p>
             </div>
-            <div style={{width:"30%"}}>
+            <div class="overlayBlurbDivImg">
               <img src="/projects/hth/render1.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
           <h2>MARIO EXPLORES A ZELDA WORLD!</h2>
 
-          <div style={{display:"flex"}}>
-            <div style={{width:"30%"}}>
+          <div class="overlayBlurbDiv">
+            <div class="overlayBlurbDivImg">
               <img src="/projects/hth/render2.png" style={{width:"300px"}}></img>
             </div>
-            <div style={{width:"60%"}}>
+            <div class="overlayBlurbDivP">
               <p>At Peach's request, Mario explores a hole in the Mushroom Kingdom that leads straight to Hyrule. With the help of the fairy Aeros, Mario must find the villain Vaati in his temple and bring peace back to Hyrule. With six items across two dungeons and an overworld, plenty of Zelda mechanics are fleshed out in classic Mario gameplay.</p>
             </div>
           </div>

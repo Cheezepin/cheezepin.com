@@ -1,19 +1,33 @@
 import React from 'react';
 import AnimatedPage from "./AnimatedPage";
 import Ononoki from '/src/components/Ononoki';
-// import "./pages.css";
+import { createGlobalStyle } from 'styled-components'
+import "./resume.css";
 
-const About = () => {
+const ResumeGlobalStyle = createGlobalStyle`
+  body {
+    background-image: none;
+    background: rgb(30,30,30);
+    margin = 0;
+    padding = 0;
+    overflow-x:clip;
+    width:100%;
+  }`
+
+const Resume = () => {
   return (
-    <AnimatedPage>
+    <>
+        <ResumeGlobalStyle/>
         <div style={{
             justifyContent: 'centre',
             alignItems: 'centre',
             fontSize:"30px",
         }}
         >
-        <h1 class="centerheader">Hello,</h1>
-        <Ononoki/>
+
+        <h1>Jason Lev</h1>
+        <embed src="/nanoparticles.pdf" width="70%" height="800vh" 
+        type="application/pdf"></embed>
         <h1 class="centerheader">I'm <i>Cheezepin.</i></h1>
         <div style={{
           fontFamily:"Arial",
@@ -27,8 +41,8 @@ const About = () => {
           <p>My links are <a href="/#/contact">here.</a></p>
         </div>
         </div>
-    </AnimatedPage>
+    </>
   );
 };
 
-export default About;
+export default Resume;

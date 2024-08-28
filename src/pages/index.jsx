@@ -25,7 +25,7 @@ const Home = () => {
           <iframe /*width="960vh" height="540vh"*/ src="https://www.youtube.com/embed/RQ4kvmQAZD8" class="bigVideo" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
         {/* </div> */}
 
-        <a style={{textAlign: "center", fontSize: "60px"}} href="https://romhacking.com/hack/Dog-Collab"><h2>Download here!</h2></a>
+        <a style={{textAlign: "center", fontSize: "50px"}} href="https://romhacking.com/hack/Dog-Collab"><h2>Download Now!</h2></a>
 
         <ImageBlurbPair
           imgSide = {"l"}

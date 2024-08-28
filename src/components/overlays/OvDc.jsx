@@ -16,26 +16,26 @@ class OvDc extends Ov {
           <iframe class="overlayVideo" width="640px" height="360px" src="https://www.youtube.com/embed/RQ4kvmQAZD8?si=f5lKsMz8TqdZAIUg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
           <h2>INFO</h2>
-          <div style={{display:"flex"}}>
-            <div style={{width:"60%", marginLeft:"5%"}}>
+          <div class="overlayBlurbDiv">
+            <div class="overlayBlurbDivP exMarg">
               <p>Super Mario 64 ROM Hack</p>
               <p>Release Date: Feb. 24th, 2023</p>
               <p>Concept, organization, cleanup by Cheezepin</p>
               <p>Organization, cleanup by thecozies</p>
               <p>Level design by Ashley, MrComit, someone2639, Cheezepin, BeverlyBean, Rovert, CowQuack, KeyBlader, an_unidentified_emu, Yoshi Milkman, Fazana, and thecozies</p>
             </div>
-            <div style={{width:"30%"}}>
+            <div class="overlayBlurbDivImg">
               <img src="/projects/dc/dcm1.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
           <h2>A NEW STORY WITH A CANINE FRIEND!</h2>
 
-          <div style={{display:"flex"}}>
-            <div style={{width:"30%"}}>
+          <div class="overlayBlurbDiv">
+            <div class="overlayBlurbDivImg">
               <img src="/projects/dc/dcm2.png" style={{width:"300px"}}></img>
             </div>
-            <div style={{width:"60%"}}>
+            <div class="overlayBlurbDivP">
               <p>Bowser has taken Peach again, but in this evolution of classic Mario 64, you'll have to travel the whole world to get her back! Your trusty pet dog will accompany you in every level. He can dig up treasure, open doors, give you a ride, and much more! Collect over 70 stars in over 10 levels crafted by established ROM hackers, with all sorts of custom mechanics and gimmicks!</p>
             </div>
           </div>

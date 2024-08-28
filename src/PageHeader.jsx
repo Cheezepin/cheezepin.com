@@ -17,6 +17,10 @@ import Projects from "./pages/projects";
 import Contact from "./pages/contact";
 import About from "./pages/about";
 
+import Resume from "./pages/resume";
+
+import OnonokiPage from "./pages/ononoki";
+
 import Break from "./components/Break"
 
 import OvYctf from './components/overlays/OvYctf';
@@ -25,7 +29,7 @@ import OvDc from './components/overlays/OvDc';
 function PageHeader() {
   return (
     <>
-      <img src={siteLogo} class="centerHeader"></img>
+      {/* <img src={siteLogo} class="centerHeader"></img> */}
 
       <Router>
           <InsideRouter/>
@@ -47,6 +51,8 @@ function InsideRouter() {
             </Route>
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
+            <Route path="/ononoki" element={<OnonokiPage />} />
+            <Route path="/resume" element={<Resume/>} />
         </Routes>
       </AnimatePresence>
     </>

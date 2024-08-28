@@ -25,7 +25,7 @@ class Ononoki extends Component {
           velocity: vel,
           rot: this.state.rot+this.state.velocity,
         })
-      }, 5);
+      }, 10);
     }
 
     componentWillUnmount() {
@@ -33,8 +33,10 @@ class Ononoki extends Component {
     }
 
     spinOnonoki(el) {
+      var currVel = this.state.velocity;
+      var newVel = currVel + (20 - (currVel/1.02));
       el.setState({
-        velocity: 20,
+        velocity: newVel,
       })
     }
 

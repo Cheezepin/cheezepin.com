@@ -33,6 +33,7 @@
         border-radius: 0px;
         margin:0;
         width:100%;
+        animation: divComeInFromBottomMobile 0.4s ease-out;
     }
 }
 
@@ -50,7 +51,16 @@
         margin-top:500px;
     }
     to {
-        margin-top:50px;
+        margin-top:0px;
+    }
+}
+
+@keyframes divComeInFromBottomMobile {
+    from {
+        margin-top:500px;
+    }
+    to {
+        margin-top:0px;
     }
 }
 
@@ -102,4 +112,64 @@
 }
 .invert h2 {
     text-shadow: black 2px 2px 6px !important;
+}
+
+.overlayBlurbDiv {
+    display:flex;
+    @media screen and (max-width: 768px) {
+        display:inline-block;
+    }
+}
+
+.overlayBlurbDivP {
+    width:60%;
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        margin-left: 5% !important;
+    }
+}
+
+.exMarg {
+    margin-left:5%;
+    @media screen and (max-width: 768px) {
+        margin-left:0;
+    }
+}
+
+.overlayBlurbDivImg {
+    width:30%;
+    @media screen and (max-width: 768px) {
+        width: auto;
+    }
+}
+
+.overlayVideo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    aspect-ratio: 16/9;
+
+    @media screen and (max-width: 768px) {
+        width: 90%;
+    }
+}
+
+.closeButton {
+    display:none;
+    position: fixed;
+    right:0;
+    top: 0;
+    margin-right:50px;
+    margin-top: 50px;
+    z-index:5000;
+    border-radius: 50%;
+    @media screen and (max-width: 768px) {
+        display:block;
+    }
+    width:15%;
+}
+
+.closeButton:hover {
+    filter: brightness(50%);
 }

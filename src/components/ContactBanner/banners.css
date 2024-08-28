@@ -1,0 +1,34 @@
+.contactDiv {
+    border-radius: 40px;
+    display: flex;
+    place-content: center;
+    max-height: 200px;
+    vertical-align: middle;
+    width:auto;
+    margin:auto;
+    overflow-x:clip;
+
+    @media screen and (max-width: 768px) {
+        
+    }
+}
+
+.contactImg {
+    aspect-ratio: auto;
+    max-height:140px;
+    padding:40px;
+
+    @media screen and (max-width: 768px) {
+        max-height:100px;
+    }
+}
+
+.contactText {
+    font-size:64px;
+    margin-right: 5%;
+
+    @media screen and (max-width: 768px) {
+        margin-top:55px;
+        font-size:48px;
+    }
+}
