@@ -2,7 +2,9 @@ import React from 'react';
 import AnimatedPage from "./AnimatedPage";
 import Ononoki from '/src/components/Ononoki';
 import { createGlobalStyle } from 'styled-components'
-import "./resume.css";
+import styled from "styled-components";
+
+import resumePDF from '/src/assets/JasonLev_Resume.pdf'
 
 const ResumeGlobalStyle = createGlobalStyle`
   body {
@@ -13,6 +15,10 @@ const ResumeGlobalStyle = createGlobalStyle`
     overflow-x:clip;
     width:100%;
   }`
+
+const Header = styled.h1`
+    color: white;
+`;
 
 const Resume = () => {
   return (
@@ -25,8 +31,8 @@ const Resume = () => {
         }}
         >
 
-        <h1>Jason Lev</h1>
-        <embed src="/nanoparticles.pdf" width="70%" height="800vh" 
+        <Header>Jason Lev</Header>
+        <embed src={resumePDF} width="70%" height="800vh" 
         type="application/pdf"></embed>
         <h1 class="centerheader">I'm <i>Cheezepin.</i></h1>
         <div style={{
