@@ -7,7 +7,7 @@
 }
 
 .dc {
-    background-image: url(/projects/dc/dc.png);
+    background-image: url(/assets/projects/dc/dc.png);
     background-size:2000px;
     background-repeat: repeat-x;
     animation: slide 10s linear infinite;

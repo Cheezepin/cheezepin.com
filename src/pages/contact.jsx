@@ -25,10 +25,10 @@ const Contact = () => {
             link = "https://www.github.com/Cheezepin"
         />
         <ContactBanner
-            imgName = "twl"
+            imgName = "blu"
             color = "rgba(150,150,255,0.5)"
-            text = "Twitter"
-            link = "https://www.twitter.com/Cheezepin"
+            text = "Bluesky"
+            link = "https://bsky.app/profile/cheezepin.com"
         />
         <ContactBanner
             imgName = "ema"

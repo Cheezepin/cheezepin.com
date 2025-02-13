@@ -29,19 +29,19 @@ const Home = () => {
 
         <ImageBlurbPair
           imgSide = {"l"}
-          imgPath = {"projects/dc/dcm1.png"}
+          imgPath = {"assets/projects/dc/dcm1.png"}
           header = {"Save Peach in an\nAll-New Mario Adventure!"}
           blurb = {"Bowser has taken Peach again, but in this evolution of classic Mario 64, you'll have to travel the whole world to get her back!"}
         />
         <ImageBlurbPair
           imgSide = {"r"}
-          imgPath = {"projects/dc/dcm2.png"}
+          imgPath = {"assets/projects/dc/dcm2.png"}
           header = {"Travel with a Canine Companion!"}
           blurb = {"Your trusty pet dog will accompany you in every level. He can dig up treasure, open doors, give you a ride, and much more!"}
         />
         <ImageBlurbPair
           imgSide = {"l"}
-          imgPath = {"projects/dc/dcm3.png"}
+          imgPath = {"assets/projects/dc/dcm3.png"}
           header = {"Unique Levels from Talented Creators!"}
           blurb = {"Collect over 70 stars in over 10 levels crafted by established ROM hackers, with all sorts of custom mechanics and gimmicks!"}
         />

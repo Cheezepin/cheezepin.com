@@ -19,6 +19,8 @@ import {
   import OvHth from '../components/overlays/OvHth';
   import OvDr from '../components/overlays/OvDr';
   import OvJm from '../components/overlays/OvJm';
+  import OvBk from '../components/overlays/OvBk';
+  import OvCm from '../components/overlays/OvCm';
   
   import "../components/overlays/overlays.css"
 
@@ -45,6 +47,16 @@ const Projects = () => {
         <h1>Highlighted Completed Projects:</h1>
 
         <div style={{alignItems: "center"}}>
+        <ProjectButton
+            imgPath = "cm/cm_bttn"
+            bgPath = "cm/cm_bg"
+            setOverlay={() => setOverlay("cm")}
+        />
+        <ProjectButton
+            imgPath = "bk/bk_bttn"
+            bgPath = "bk/bk_bg"
+            setOverlay={() => setOverlay("bk")}
+        />
         <ProjectButton
             imgPath = "dc/dog_bttn"
             bgPath = "dc/dog_bg"
@@ -89,18 +101,7 @@ const Projects = () => {
   );
 };
 
-const activePages = [
-    "yctf",
-    "dc",
-    "rm",
-    "gs",
-    "hth",
-    "dr",
-    "jm",
-];
-
 function ProjectOverlay({overlay, setOverlay}) {
-    console.log(overlay);
     var displayedOverlay = null;
     switch(overlay) {
         case "yctf": displayedOverlay = <OvYctf setOverlay={setOverlay}/>; break;
@@ -110,12 +111,14 @@ function ProjectOverlay({overlay, setOverlay}) {
         case "hth":  displayedOverlay = <OvHth  setOverlay={setOverlay}/>; break;
         case "dr":   displayedOverlay = <OvDr   setOverlay={setOverlay}/>; break;
         case "jm":   displayedOverlay = <OvJm   setOverlay={setOverlay}/>; break;
+        case "cm":   displayedOverlay = <OvCm   setOverlay={setOverlay}/>; break;
+        case "bk":   displayedOverlay = <OvBk   setOverlay={setOverlay}/>; break;
     }
     if(displayedOverlay == null) {return;}
     return (
         <div class="overlayParentDiv">
             {displayedOverlay}
-            <img src="/controls/close.png" class="closeButton"></img>
+            <img src="/assets/controls/close.png" class="closeButton"></img>
         </div>
     )
   }

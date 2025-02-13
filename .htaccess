@@ -1,10 +1,10 @@
 RewriteEngine On
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\ HTTP/
-RewriteRule ^(.*)index$ https://cheezepin.com/$1 [L,R=301]
-
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^([^/]+)/$ https://cheezepin.com/$1 [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteRule . /index.html [L]
 
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /(.+)\.html\ HTTP/
-RewriteRule ^(.+)\.html$ https://cheezepin.com/$1 [L,R=301]
-RewriteRule ^([a-z]+)$ /$1.html [L]
+Options All -Indexes
+IndexIgnore *

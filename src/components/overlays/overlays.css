@@ -109,6 +109,7 @@
 }
 .invert h1 {
     text-shadow: black 2px 2px 6px !important;
+    color:white;
 }
 .invert h2 {
     text-shadow: black 2px 2px 6px !important;

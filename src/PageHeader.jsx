@@ -1,13 +1,14 @@
-import siteLogo from './assets/header/logo.png'
+// import siteLogo from './assets/header/logo.png'
 import './PageHeader.css'
 
 import Navbar from "./components/Navbar";
 
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Routes,
   Route,
-  useLocation
+  useLocation,
+  useNavigate
 } from "react-router-dom";
 
 import { AnimatePresence } from 'framer-motion';
@@ -23,9 +24,6 @@ import OnonokiPage from "./pages/ononoki";
 
 import Break from "./components/Break"
 
-import OvYctf from './components/overlays/OvYctf';
-import OvDc from './components/overlays/OvDc';
-
 function PageHeader() {
   return (
     <>
@@ -40,12 +38,20 @@ function PageHeader() {
 
 function InsideRouter() {
   const location = useLocation();
+
+  let location2 = location;
+  if(location2.hash) { //backwards compat with some shitty links lol
+    location2.pathname = location2.hash;
+    location2.pathname = location2.pathname.replace("#",'');
+    location2.hash = '';
+  }
+
   return (
     <>
       <Navbar />
       <Break h="25px"/>
       <AnimatePresence mode="wait">
-        <Routes key={location.pathname} location={location}>
+        <Routes key={location2.pathname} location={location2}>
             <Route path="/" element={<Home />} />
             <Route path="/projects/*" element={<Projects />}>
             </Route>

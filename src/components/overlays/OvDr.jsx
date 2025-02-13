@@ -2,7 +2,7 @@ import React from 'react';
 import Ov from './Ov';
 import "./overlays.css"
 
-// import bg from "/projects/gs/bg.png"
+// import bg from "/assets/projects/gs/bg.png"
 
 export default class OvDr extends Ov {
   render() {
@@ -28,7 +28,7 @@ export default class OvDr extends Ov {
               <p>2nd place in the RHDC Mystery Hacks competition</p>
             </div>
             <div class="overlayBlurbDivImg">
-              <img src="/projects/dr/render1.png" style={{width:"300px"}}></img>
+              <img src="/assets/projects/dr/render1.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
@@ -36,7 +36,7 @@ export default class OvDr extends Ov {
 
           <div class="overlayBlurbDiv">
             <div class="overlayBlurbDivImg">
-              <img src="/projects/dr/render2.png" style={{width:"300px"}}></img>
+              <img src="/assets/projects/dr/render2.png" style={{width:"300px"}}></img>
             </div>
             <div class="overlayBlurbDivP">
               <p>Mario wakes up inside Peach's Castle, surrounded by fifteen of the most skilled individuals in the Mushroom Kingdom. With no escape, they learn from the head honcho Monobup they're all part of a killing game, and no one can leave until one person kills another. With tensions running high and discord growing, will Mario and the gang be able to solve the mysteries of the castle--or a murder--and escape?</p>
@@ -46,11 +46,11 @@ export default class OvDr extends Ov {
 
           <h2>GALLERY</h2>
           <div style={{display:"flex", overflowX:"scroll", overflowY:"clip", height: "400px", marginBottom:"50px"}}>
-            <img class="galleryImg" src="/projects/dr/gallery/1.png"></img>
-            <img class="galleryImg" src="/projects/dr/gallery/2.png"></img>
-            <img class="galleryImg" src="/projects/dr/gallery/3.png"></img>
-            <img class="galleryImg" src="/projects/dr/gallery/4.png"></img>
-            <img class="galleryImg" src="/projects/dr/gallery/5.png"></img>
+            <img class="galleryImg" src="/assets/projects/dr/gallery/1.png"></img>
+            <img class="galleryImg" src="/assets/projects/dr/gallery/2.png"></img>
+            <img class="galleryImg" src="/assets/projects/dr/gallery/3.png"></img>
+            <img class="galleryImg" src="/assets/projects/dr/gallery/4.png"></img>
+            <img class="galleryImg" src="/assets/projects/dr/gallery/5.png"></img>
           </div>
         </div>
     );
