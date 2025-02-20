@@ -9,7 +9,6 @@ export default class OvHth extends Ov {
     return (
         <div class="overlayDiv invert" style={{background:`linear-gradient(rgb(30, 0, 30), rgb(0, 0, 30))`, backgroundSize:"50%"}}ref={this.wrapperRef}>
           <h1 class="centerheader">The Hole to Hyrule</h1>
-
           <h2><a href="https://romhacking.com/hack/the-hole-to-hyrule">DOWNLOAD</a></h2>
 
           <h2>TRAILER</h2>
@@ -18,11 +17,11 @@ export default class OvHth extends Ov {
           <h2>INFO</h2>
           <div class="overlayBlurbDiv">
             <div class="overlayBlurbDivP exMarg">
-              <p>Super Mario 64 ROM Hack</p>
               <p>Release Date: Oct. 14th, 2020</p>
-              <p>Programming, level design, modeling, writing by Cheezepin</p>
-              <p>Concept, artwork, voice acting by HeroTechne</p>
-              <p>Music by Thorndust, additional voices by Victuracor</p>
+              <p>Language Used: MIPS R4000 Assembly</p>
+              <p>Engine: Super Mario 64 (ROM Hack)</p>
+              <p>Programming, level design, modeling, writing by Jason Lev ("Cheezepin")</p>
+              <p>Artwork by HeroTechne</p>
               <p>3rd place in the RHDC Zelda Hacks competition</p>
             </div>
             <div class="overlayBlurbDivImg">
@@ -30,14 +29,17 @@ export default class OvHth extends Ov {
             </div>
           </div>
 
-          <h2>MARIO EXPLORES A ZELDA WORLD!</h2>
+          <h2>FEATURES PROGRAMMED</h2>
 
           <div class="overlayBlurbDiv">
             <div class="overlayBlurbDivImg">
               <img src="/assets/projects/hth/render2.png" style={{width:"300px"}}></img>
             </div>
             <div class="overlayBlurbDivP">
-              <p>At Peach's request, Mario explores a hole in the Mushroom Kingdom that leads straight to Hyrule. With the help of the fairy Aeros, Mario must find the villain Vaati in his temple and bring peace back to Hyrule. With six items across two dungeons and an overworld, plenty of Zelda mechanics are fleshed out in classic Mario gameplay.</p>
+              <p>Traditional Zelda items (projectile-spawning fire rod, boomerang with special collisions, collision-defying invisibility cloak, alternate moveset for Spindrift Mask Mario)</p>
+              <p>In-game and menu UI to change between and show status of items</p>
+              <p>Custom cutscene and voice acting engine</p>
+              <p>Custom boss fights interacting with programmed items</p>
             </div>
           </div>
 

@@ -12,29 +12,32 @@ class OvBk extends Ov {
     return (
         <div class="overlayDiv" style={{background: `linear-gradient(#DEFFFC, #9198e5)`, backgroundSize:"20%"}}ref={this.wrapperRef}>
           <h1 class="centerheader">Bakedry</h1>
-
-          <h2><a href="https://cheezepin.itch.io/bakedry">DOWNLOAD</a></h2>
+          <iframe frameborder="0" src="https://itch.io/embed/2672150" width="552" height="167"><a href="https://cheezepin.itch.io/bakedry">Bakedry by Cheezepin, SassyStella55, Kayla M, Carriez0117, glotch</a></iframe>
 
           <h2>INFO</h2>
           <div class="overlayBlurbDiv">
           <div class="overlayBlurbDivP exMarg">
-              <p>Godot Engine Game for TAGD Spring '24 Game Jam "Roll Out"</p>
               <p>Release Date: November 22nd, 2024</p>
-              <p>Concept, programming, level design by Cheezepin</p>
+              <p>Language: C#</p>
+              <p>Engine: Godot</p>
+              <p>Programming, level design by Jason Lev</p>
+              <p>Art (including art used on this page) by <a href="https://www.linkedin.com/in/kaylamchaney/">Kayla McHaney</a> and <a href="https://www.linkedin.com/in/karen-lopez-a3092a28a/">Karen Lopez</a>, sound designed by <a href="https://www.linkedin.com/in/kyle-lev-882942326/">Kyle Lev</a>, additional programming by <a href="https://www.linkedin.com/in/carriez0117/">Carrie Zhang</a></p>
+              <p>Designed for the TAGD Spring '24 Game Jam with theme "Roll Out"</p>
             </div>
             <div class="overlayBlurbDivImg">
               <img src="/assets/projects/bk/render.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
-          <h2>LOTS ON YOUR PLATE!</h2>
-
+          <h2>FEATURES PROGRAMMED</h2>
           <div class="overlayBlurbDiv">
             <div class="overlayBlurbDivImg">
               <img src="/assets/projects/bk/render2.png" style={{width:"300px"}}></img>
             </div>
             <div class="overlayBlurbDivP">
-              <p>Bakery in the front, drug operation in the back, handle both with one kitchen! You're managing the baked goods store solo today, and the customers won't let up. You've gotta make enough money to stay open one more day! Serve them quickly receive extra tips, and make sure not to mess up their order, or they'll get pissed!</p>
+              <p>Top-down player and enemy movement and collision</p>
+              <p>Ingredient and recipe indexing and combination logic</p>
+              <p>Item holding and placement system</p>
             </div>
           </div>
 

@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import AnimatedPage from './AnimatedPage';
 import ProjectButton from '../components/ProjectButton';
+import { createGlobalStyle } from 'styled-components'
+import styled from "styled-components";
 
 import {
     Routes,
@@ -12,24 +14,44 @@ import {
   
   import { AnimatePresence } from 'framer-motion';
 
-  import OvYctf from '../components/overlays/OvYctf';
-  import OvDc from '../components/overlays/OvDc';
-  import OvRm from '../components/overlays/OvRm';
-  import OvGs from '../components/overlays/OvGs';
-  import OvHth from '../components/overlays/OvHth';
-  import OvDr from '../components/overlays/OvDr';
-  import OvJm from '../components/overlays/OvJm';
-  import OvBk from '../components/overlays/OvBk';
-  import OvCm from '../components/overlays/OvCm';
-  import OvCh from '../components/overlays/OvCh';
-  import OvPm from '../components/overlays/OvPm';
+  import OvYctf from '../components/portfolio_overlays/OvYctf';
+  import OvDc from '../components/portfolio_overlays/OvDc';
+  import OvRm from '../components/portfolio_overlays/OvRm';
+  import OvGs from '../components/portfolio_overlays/OvGs';
+  import OvHth from '../components/portfolio_overlays/OvHth';
+  import OvDr from '../components/portfolio_overlays/OvDr';
+  import OvJm from '../components/portfolio_overlays/OvJm';
+  import OvBk from '../components/portfolio_overlays/OvBk';
+  import OvCm from '../components/portfolio_overlays/OvCm';
+  import OvCh from '../components/portfolio_overlays/OvCh';
+  import OvPm from '../components/portfolio_overlays/OvPm';
   
-  import "../components/overlays/overlays.css"
+  import "../components/portfolio_overlays/overlays.css"
 
-const Projects = () => {
+  import bgimgdark from '/src/components/Background/bg_lame_dark.png'
+
+const PortfolioGlobalStyle = createGlobalStyle`
+  body {
+    background: rgb(30,30,30);
+    background-image: url(${bgimgdark});
+    margin = 0;
+    padding = 0;
+    overflow-x:clip;
+    width:100%;
+  }`
+
+const Portfolio = () => {
     const [activeOverlay, setOverlay] = useState("empy");
   return (
-    <AnimatedPage>
+    <>
+    <PortfolioGlobalStyle/>
+    <div style={{lineHeight: "2vw"}}>
+    <h1 style={{color: "white", fontSize: "10vw"}}>Jason Lev</h1>
+    <h1 style={{color: "white", fontSize: "6vw"}}>Gameplay Programmer</h1>
+    </div>
+    <br></br>
+    <h1 style={{color:"white", fontSize:"4vw"}}>Links: <a href="/resume">Resume</a>, <a href="https://www.linkedin.com/in/jason-lev/">Linkedin</a>, <a href="https://www.github.com/Cheezepin">GitHub</a>, <a href="https://cheezepin.itch.io/">itch.io</a></h1>
+    <br></br>
         <div
         style={{
             justifyContent: 'centre',
@@ -37,7 +59,7 @@ const Projects = () => {
             minHeight: "24vw",
         }}
         >
-        <h1>Highlighted Projects:</h1>
+        <h1 style={{color: "white"}}>Highlighted Projects:</h1>
         <ProjectButton
             imgPath = "ch/ch_bttn"
             bgPath = "ch/ch_bg"
@@ -50,7 +72,7 @@ const Projects = () => {
         />
         </div>
 
-        <h1>Other Projects:</h1>
+        <h1 style={{color: "white"}}>Other Projects:</h1>
 
         <div style={{alignItems: "center"}}>
         <div style={{alignItems: "center", minHeight:"24vw"}}>
@@ -94,14 +116,12 @@ const Projects = () => {
             bgPath = "dr/dr64_bg"
             setOverlay={() => setOverlay("dr")}
         />
-        <ProjectButton
+        {/* <ProjectButton
             imgPath = "jm/jm64_bttn"
             bgPath = "jm/jm64_bg"
             setOverlay={() => setOverlay("jm")}
-        />
+        /> */}
         </div>
-
-        <p style={{fontSize:"36px"}}>You can find <i>all</i> of my ROM hacks <a href="https://romhacking.com/user/Cheezepin">here</a>.</p>
 
 
           {/* <OverlayHandler/> */}
@@ -109,7 +129,7 @@ const Projects = () => {
           <ProjectOverlay overlay = {activeOverlay} setOverlay={setOverlay}/>
 
         </div>
-    </AnimatedPage>
+    </>
   );
 };
 
@@ -137,4 +157,4 @@ function ProjectOverlay({overlay, setOverlay}) {
     )
   }
 
-export default Projects;
+export default Portfolio;

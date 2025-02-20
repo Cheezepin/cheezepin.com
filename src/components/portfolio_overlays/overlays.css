@@ -67,7 +67,9 @@
 .galleryImg {
     margin-left:20px;
     margin-right:20px;
-    width:90%;
+    width:75%;
+    margin-top:20px;
+    margin-bottom:20px;
 }
 
 .overlayDiv div {

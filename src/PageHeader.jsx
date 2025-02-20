@@ -19,6 +19,7 @@ import Contact from "./pages/contact";
 import About from "./pages/about";
 
 import Resume from "./pages/resume";
+import Portfolio from "./pages/portfolio";
 
 import OnonokiPage from "./pages/ononoki";
 
@@ -59,6 +60,7 @@ function InsideRouter() {
             <Route path="/about" element={<About />} />
             <Route path="/ononoki" element={<OnonokiPage />} />
             <Route path="/resume" element={<Resume/>} />
+            <Route path="/portfolio" element={<Portfolio/>} />
         </Routes>
       </AnimatePresence>
     </>

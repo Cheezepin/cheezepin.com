@@ -18,25 +18,27 @@ class OvDc extends Ov {
           <h2>INFO</h2>
           <div class="overlayBlurbDiv">
             <div class="overlayBlurbDivP exMarg">
-              <p>Super Mario 64 ROM Hack</p>
               <p>Release Date: Feb. 24th, 2023</p>
-              <p>Concept, organization, cleanup by Cheezepin</p>
-              <p>Organization, cleanup by thecozies</p>
-              <p>Level design by Ashley, MrComit, someone2639, Cheezepin, BeverlyBean, Rovert, CowQuack, KeyBlader, an_unidentified_emu, Yoshi Milkman, Fazana, and thecozies</p>
+              <p>Language Used: C</p>
+              <p>Engine: Super Mario 64 Decompilation (ROM Hack)</p>
+              <p>Concept, organization, cleanup, level design, mechanics programming by Jason Lev ("Cheezepin")</p>
             </div>
             <div class="overlayBlurbDivImg">
               <img src="/assets/projects/dc/dcm1.png" style={{width:"300px"}}></img>
             </div>
           </div>
 
-          <h2>A NEW STORY WITH A CANINE FRIEND!</h2>
-
+          <h2>FEATURES PROGRAMMED</h2>
           <div class="overlayBlurbDiv">
             <div class="overlayBlurbDivImg">
               <img src="/assets/projects/dc/dcm2.png" style={{width:"300px"}}></img>
             </div>
             <div class="overlayBlurbDivP">
-              <p>Bowser has taken Peach again, but in this evolution of classic Mario 64, you'll have to travel the whole world to get her back! Your trusty pet dog will accompany you in every level. He can dig up treasure, open doors, give you a ride, and much more! Collect over 70 stars in over 10 levels crafted by established ROM hackers, with all sorts of custom mechanics and gimmicks!</p>
+              <p>Level select and star results UI</p>
+              <p>Spherical camera programming and UI for a world map level select</p>
+              <p>Elevators, breakable walls, and a snowboarding Bowser cutscene for Bowser's Flying Fortress</p>
+              <p>Bowser w/ Chain Chomp pet boss behavior for the first and third Bowser fights</p>
+              <p>Warp boxes and collectable bones (with save support) for the finale stage</p>
             </div>
           </div>
 

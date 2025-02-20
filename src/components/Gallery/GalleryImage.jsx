@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import AnimatedPage from "../../pages/AnimatedPage";
 import Ononoki from '/src/components/Ononoki';
-import GalleryImage from '/src/components/Gallery/GalleryImage.jsx';
-import "./overlays.css"
 
-class Ov extends Component {
+class GalleryImage extends Component {
   constructor(props) {
     super(props);
 
@@ -22,7 +20,8 @@ class Ov extends Component {
 
   handleClickOutside(event) {
     if (this.wrapperRef && !this.wrapperRef.current.contains(event.target)) {
-      this.props.setOverlay("empy");
+    //   this.props.setOverlay("empy");
+        alert("yeah");
     }
   }
 
@@ -33,4 +32,4 @@ class Ov extends Component {
   }
 };
 
-export default Ov;
+export default GalleryImage;

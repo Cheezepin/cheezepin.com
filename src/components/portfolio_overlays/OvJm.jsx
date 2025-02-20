@@ -9,7 +9,6 @@ export default class OvJm extends Ov {
     return (
         <div class="overlayDiv invert" style={{background:`linear-gradient(rgb(44, 34, 103), rgb(127, 41, 108))`, backgroundSize:"50%"}}ref={this.wrapperRef}>
           <h1 class="centerheader">Jump Man LXIV</h1>
-
           <h2><a href="https://romhacking.com/hack/jump-man-lxiv">DOWNLOAD</a></h2>
 
           <h2>TRAILER</h2>
@@ -18,9 +17,10 @@ export default class OvJm extends Ov {
           <h2>INFO</h2>
           <div class="overlayBlurbDiv">
             <div class="overlayBlurbDivP exMarg">
-              <p>Super Mario 64 ROM Hack</p>
               <p>Release Date: Aug. 11th, 2019</p>
-              <p>Concept, programming, level design, music transcriptions, writing, modeling by Cheezepin</p>
+              <p>Language Used: MIPS R4000 Assembly</p>
+              <p>Engine: Super Mario 64 (ROM Hack)</p>
+              <p>Concept, programming, level design, music transcriptions, writing, modeling by Jason Lev ("Cheezepin")</p>
               <p>2nd place in the RHDC Linear Hacks competition</p>
             </div>
             <div class="overlayBlurbDivImg">
@@ -28,14 +28,17 @@ export default class OvJm extends Ov {
             </div>
           </div>
 
-          <h2>A SIGN-IFICANT CLASSIC CHALLENGE!</h2>
+          <h2>FEATURES PROGRAMMED</h2>
 
           <div class="overlayBlurbDiv">
             <div class="overlayBlurbDivImg">
               <img src="/assets/projects/jm/render1.png" style={{width:"300px"}}></img>
             </div>
             <div class="overlayBlurbDivP">
-              <p>Mario finds himself at odds with the omniscient, all-powerful Bill Board. With his new ability to spawn signposts as temporary platforms, he must traverse three wacky stages while battling Bill's minions on his way to his space lair.</p>
+              <p>Signpost-spawning mechanic to enhance platforming</p>
+              <p>Menu UI to select levels</p>
+              <p>Loop-de-loops to be ran through</p>
+              <p>Custom boss fight with an explosion countdown</p>
             </div>
           </div>
 
