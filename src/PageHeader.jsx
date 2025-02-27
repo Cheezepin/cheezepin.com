@@ -23,6 +23,8 @@ import Portfolio from "./pages/portfolio";
 
 import OnonokiPage from "./pages/ononoki";
 
+import OPAS from "./pages/opas";
+
 import Break from "./components/Break"
 
 function PageHeader() {
@@ -61,6 +63,7 @@ function InsideRouter() {
             <Route path="/ononoki" element={<OnonokiPage />} />
             <Route path="/resume" element={<Resume/>} />
             <Route path="/portfolio" element={<Portfolio/>} />
+            <Route path="/opas" element={<OPAS/>} />
         </Routes>
       </AnimatePresence>
     </>
