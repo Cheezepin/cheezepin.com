@@ -2,6 +2,7 @@
 import './PageHeader.css'
 
 import Navbar from "./components/Navbar";
+import NavbarTAGD from "./components/NavbarTAGD";
 
 import {
   BrowserRouter as Router,
@@ -24,6 +25,10 @@ import Portfolio from "./pages/portfolio";
 import OnonokiPage from "./pages/ononoki";
 
 import OPAS from "./pages/opas";
+
+import TAGDPR from "./pages/tagdpr";
+import TAGDOP from "./pages/tagdop";
+import TAGDEC from "./pages/tagdec";
 
 import Break from "./components/Break"
 
@@ -52,6 +57,7 @@ function InsideRouter() {
   return (
     <>
       <Navbar />
+      <NavbarTAGD />
       <Break h="25px"/>
       <AnimatePresence mode="wait">
         <Routes key={location2.pathname} location={location2}>
@@ -64,6 +70,9 @@ function InsideRouter() {
             <Route path="/resume" element={<Resume/>} />
             <Route path="/portfolio" element={<Portfolio/>} />
             <Route path="/opas" element={<OPAS/>} />
+            <Route path="/tagdpr" element={<TAGDPR/>} />
+            <Route path="/tagdop" element={<TAGDOP/>} />
+            <Route path="/tagdec" element={<TAGDEC/>} />
         </Routes>
       </AnimatePresence>
     </>

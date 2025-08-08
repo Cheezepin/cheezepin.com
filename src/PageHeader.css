@@ -32,3 +32,27 @@
         width: 80%;
     }
 }
+
+.tagdLogoBase {
+    pointer-events: none;
+    position: relative;
+    top:0px;
+    left:0px;
+    width:100%;
+}
+
+.tagdLogoSpin {
+    width:100%;
+    pointer-events: none;
+    position: absolute;
+    top:0px;
+    left:0px;
+    animation:spin 20s linear infinite;
+}
+
+@keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(360deg); 
+        transform:rotate(360deg); 
+    } 
+}

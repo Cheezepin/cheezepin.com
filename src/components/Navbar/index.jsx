@@ -17,7 +17,8 @@ import Background from '/src/components/Background'
 const Navbar = () => {
     if(window.location.href.includes("resume") || document.URL.includes("resume")
     || window.location.href.includes("portfolio") || document.URL.includes("portfolio")
-    || window.location.href.includes("opas") || document.URL.includes("opas")) {return <></>;}
+    || window.location.href.includes("opas") || document.URL.includes("opas")
+    || window.location.href.includes("tagd") || document.URL.includes("tagd")) {return <></>;}
     return (
         <>
             <img src={siteLogo} class="centerHeader"></img>

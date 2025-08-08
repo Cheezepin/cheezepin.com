@@ -7,7 +7,7 @@ const ImageBlurbPair = ({imgSide, imgPath, header, blurb}) => {
         return (
             <div class="dcblurbcontainer">
                 <img class="dcl" src={image}></img>
-                <div>
+                <div class = "lblock">
                     <h2 class="dcr">{header}</h2>
                     <p class="dcr">{blurb}</p>
                 </div>

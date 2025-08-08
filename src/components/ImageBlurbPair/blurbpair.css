@@ -30,31 +30,43 @@
   .dcblurbcontainer h2 {
     font-weight: bold;
     font-size: 64px;
+    float:none;
     text-align: center;
     margin-bottom: -20px;
     /* -webkit-text-stroke: 2px white; */
+    padding-left: 0vw;
+    padding-right: 0vw;
     text-shadow: gray 4px 4px 4px ;
     font-family: 'Anton';
+
+    @media screen and (max-width: 1500px) {
+      line-height: 60px;
+    }
 
     @media screen and (max-width: 768px) {
       padding-left: auto;
       padding-right: auto;
+      line-height: 60px;
     }
   }
   
   .dcblurbcontainer p {
     text-align: left;
     font-size: 40px;
-    padding-left: 10vw;
-    padding-right: 0;
-
+    padding-left: 5vw;
+    padding-right: 5vw;
     font-family: 'Arial';
     /* -webkit-text-stroke: 2px white; */
     text-shadow: gray 2px 2px 2px ;
 
+    @media screen and (max-width: 1500px) {
+      line-height: 30px;
+    }
+
     @media screen and (max-width: 768px) {
       padding-left: 0;
       padding-right: 0;
+      line-height: 40px;
     }
   }
 
@@ -75,5 +87,10 @@
     @media screen and (max-width: 768px) {
       float:none;
       padding-right: 0;
+    }
+
+    .lblock {
+      padding-left: 5vw;
+      padding-right: 5vw;
     }
   }
