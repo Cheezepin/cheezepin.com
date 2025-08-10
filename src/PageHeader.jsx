@@ -9,7 +9,8 @@ import {
   Routes,
   Route,
   useLocation,
-  useNavigate
+  useNavigate,
+
 } from "react-router-dom";
 
 import { AnimatePresence } from 'framer-motion';
@@ -31,6 +32,9 @@ import TAGDOP from "./pages/tagdop";
 import TAGDEC from "./pages/tagdec";
 
 import Break from "./components/Break"
+import ErrorPage from './pages/404';
+
+import Recipes from './pages/recipes'
 
 function PageHeader() {
   return (
@@ -57,7 +61,7 @@ function InsideRouter() {
   return (
     <>
       <Navbar />
-      <NavbarTAGD />
+      {/* <NavbarTAGD /> */}
       <Break h="25px"/>
       <AnimatePresence mode="wait">
         <Routes key={location2.pathname} location={location2}>
@@ -69,10 +73,13 @@ function InsideRouter() {
             <Route path="/ononoki" element={<OnonokiPage />} />
             <Route path="/resume" element={<Resume/>} />
             <Route path="/portfolio" element={<Portfolio/>} />
-            <Route path="/opas" element={<OPAS/>} />
+            {/* <Route path="/opas" element={<OPAS/>} />
             <Route path="/tagdpr" element={<TAGDPR/>} />
             <Route path="/tagdop" element={<TAGDOP/>} />
-            <Route path="/tagdec" element={<TAGDEC/>} />
+            <Route path="/tagdec" element={<TAGDEC/>} /> */}
+            <Route path="/recipes" element={<Recipes/>} />
+
+            <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </AnimatePresence>
     </>

@@ -14,11 +14,29 @@ import '/src/PageHeader.css'
 
 import Background from '/src/components/Background'
 
+const noNavbar = [
+    "resume",
+    "portfolio",
+    "opas",
+    "tagd",
+    "recipes",
+];
+
+const hasNavbar = () => {
+    let hasNavbar = true;
+    noNavbar.forEach(element => {
+        if(window.location.href.includes(element) || document.URL.includes(element)) {
+            console.log(element);
+            hasNavbar = false;
+            return;
+        }
+    });
+    return hasNavbar;
+}
+
 const Navbar = () => {
-    if(window.location.href.includes("resume") || document.URL.includes("resume")
-    || window.location.href.includes("portfolio") || document.URL.includes("portfolio")
-    || window.location.href.includes("opas") || document.URL.includes("opas")
-    || window.location.href.includes("tagd") || document.URL.includes("tagd")) {return <></>;}
+    if(!hasNavbar()) {return <></>;}
+    console.log(hasNavbar());
     return (
         <>
             <img src={siteLogo} class="centerHeader"></img>

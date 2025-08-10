@@ -17,7 +17,7 @@ import '/src/PageHeader.css'
 import Background from '/src/components/Background'
 
 const NavbarTAGD = () => {
-    if(!(window.location.href.includes("tagd") || document.URL.includes("tagd"))) {return <></>;}
+    /*if(!(window.location.href.includes("tagd") || document.URL.includes("tagd"))) {return <></>;}
     return (
         <>
             <div style={{overflow:"hidden", width:"100%"}}>
@@ -41,7 +41,8 @@ const NavbarTAGD = () => {
                 </NavMenu>
             </Nav>
         </>
-    );
+    );*/
+    return <></>;
 };
 
 export default NavbarTAGD;
