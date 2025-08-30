@@ -3,6 +3,13 @@ import AnimatedPage from "./AnimatedPage";
 import Ononoki from '/src/components/Ononoki';
 import "./pages.css";
 import "./recipes.css"
+import { createGlobalStyle } from 'styled-components'
+import styled from "styled-components";
+
+const RecipesGlobalStyle = createGlobalStyle`
+b {
+    line-height: 5%;
+}`;
 
 import { render } from 'react-dom';
 
@@ -34,7 +41,7 @@ class RecipeButton extends Component {
     }
 
     render() {
-        return <div className="recipebutton" style={{backgroundImage: "url(/src/assets/recipes/"+this.img+".png)"}}>
+        return <div className="recipebutton" style={{backgroundImage: "url(/assets/recipes/"+this.img+".png)"}}>
                     <button onClick={() => this.func(this.name)} 
                         className="recipebuttonimage">
                     <p style={{margin:"auto"}}>{this.name}</p>
@@ -48,13 +55,14 @@ const Recipes = () => {
     window.onscroll = function() {scrollFunction()};
     return (
     <AnimatedPage>
+        <RecipesGlobalStyle/>
         <div style={{
             justifyContent: 'centre',
             alignItems: 'centre',
             fontSize:"30px",
         }}
         >
-        <h1 className="centerheader" style={{fontFamily:'Papyrus', fontSize:"10vh"}}>Hello Vro 💙</h1>
+        <h1 className="centerheaderrecipe" style={{fontFamily:'Papyrus', fontSize:"10vh"}}>Hello Vro 💙</h1>
         <div style={{margin:"auto", alignItems:"center"}}>
             <RecipeButton name={"Baked Mac & Cheese"} func={switchRecipe} img={"mac/3"}/>
             <RecipeButton name={"Tiramisu"}           func={switchRecipe} img={"tiramisu/4"}/>
@@ -101,7 +109,7 @@ class RecipeMac extends Component {
     <div style={{textAlign: "center"}}>
         <h2>pepper belly pete's baked mac and cheese</h2>
         <a href="https://www.instagram.com/reel/DM9DwIWpmuU/?igsh=bms5NzYxdDdxcjZy">source</a><br/><br/>
-        <img className="recipeimg" src="/src/assets/recipes/mac/3.png"/>
+        <img className="recipeimg" src="/assets/recipes/mac/3.png"/>
     </div>
     <ul>
 <li>feeds 8 comfortably</li>
@@ -133,14 +141,14 @@ class RecipeMac extends Component {
 <li>while stirring, add in cream/milk/evaporated milk (or just the extra milk if you're like me)</li>
 <li>add in american cheese, then cheddar</li>
 <li>add in the al dente pasta which you've definitely finished by now right 😁</li>
-</ul><img className="recipeimg" src="/src/assets/recipes/mac/1.png"/><ul>
+</ul><img className="recipeimg" src="/assets/recipes/mac/1.png"/><ul>
 <li>add in Worcestershire</li>
 (you may have to transfer pasta and sauce to a pot first if it's too big)
 <br/><br/>
 <li>add half of the pasta/sauce mixture to baking pan, then a Monterrey Jack layer</li>
 <li>add other half, then mozzarella layer</li>
 (there was so much that I used two baking pans and it filled up both to the brim! you will probably need to as well)
-</ul><img className="recipeimg" src="/src/assets/recipes/mac/2.png"/><ul>
+</ul><img className="recipeimg" src="/assets/recipes/mac/2.png"/><ul>
 <li>crushed cheeze its on top (again, i didn't do this)</li>
 <li>bake for 35 min on 350 deg</li>
     </ul>
@@ -156,7 +164,7 @@ class RecipeTiramisu extends Component {
     <div style={{textAlign: "center"}}>
         <h2>sally's tiramisu</h2>
         <a href="https://sallysbakingaddiction.com/tiramisu/">source</a><br/><br/>
-        <img className="recipeimg" src="/src/assets/recipes/tiramisu/4.png"/>
+        <img className="recipeimg" src="/assets/recipes/tiramisu/4.png"/>
     </div>
     <ul>
 <li>feeds like 12 if everyone takes hearty portions</li>
@@ -210,11 +218,11 @@ they should have just a bit of firmness, not super droopy
         <li>they probably won't fit perfectly, but you can bend them a little once they're doused or cut some in half to fill space</li>
     </ul>
 </li>
-<img className="recipeimg" src="/src/assets/recipes/tiramisu/1.png"/>
+<img className="recipeimg" src="/assets/recipes/tiramisu/1.png"/>
 <li>use a spatula to spread about half the mascarpone mix over the ladyfingers in a layer</li>
-<img className="recipeimg" src="/src/assets/recipes/tiramisu/2.png"/>
+<img className="recipeimg" src="/assets/recipes/tiramisu/2.png"/>
 <li>use a strainer to strain cocoa powder in a thin layer over the cream</li>
-<img className="recipeimg" src="/src/assets/recipes/tiramisu/3.png"/>
+<img className="recipeimg" src="/assets/recipes/tiramisu/3.png"/>
 <li>repeat with dipping and laying the ladyfingers, then laying the mascarpone layer, then straining the cocoa layer</li>
 <li>chill in da fridge for at least 8 hours</li>
 </ul>

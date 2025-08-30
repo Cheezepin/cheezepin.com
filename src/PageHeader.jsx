@@ -31,6 +31,8 @@ import TAGDPR from "./pages/tagdpr";
 import TAGDOP from "./pages/tagdop";
 import TAGDEC from "./pages/tagdec";
 
+import TAGDReel from "./pages/TAGDReel"
+
 import Break from "./components/Break"
 import ErrorPage from './pages/404';
 
@@ -78,7 +80,7 @@ function InsideRouter() {
             <Route path="/tagdop" element={<TAGDOP/>} />
             <Route path="/tagdec" element={<TAGDEC/>} /> */}
             <Route path="/recipes" element={<Recipes/>} />
-
+            <Route path="/tagdreel" element={<TAGDReel/>} />
             <Route path="*" element={<ErrorPage/>}/>
         </Routes>
       </AnimatePresence>

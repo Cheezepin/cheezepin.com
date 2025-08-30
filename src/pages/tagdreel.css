@@ -1,0 +1,23 @@
+/* p {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+}*/
+
+/*h1 {
+  font-family: "Source Code Pro", monospace;
+  font-optical-sizing: auto;
+  font-weight: 20px;
+  font-style: normal;
+  color: white;
+}*/
+
+@keyframes reelDown {
+  from {
+    top: -200px;
+  }
+  to {
+    top: 0px;
+  }
+}
