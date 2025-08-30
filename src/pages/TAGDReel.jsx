@@ -27,8 +27,10 @@ class TAGDReelButton extends Component {
             stopID: 0,
         };
 
-        this.animateButton = this.animateButton.bind(this);
-        this.stopAnimatingButton = this.stopAnimatingButton.bind(this);
+        this.interval = 0;
+
+        // this.animateButton = this.animateButton.bind(this);
+        // this.stopAnimatingButton = this.stopAnimatingButton.bind(this);
     }
 
     buttonCurve(top, y, pivot) {
@@ -36,46 +38,21 @@ class TAGDReelButton extends Component {
         x*=x;
         x /= 200;
         return x;
-        return 0;
     }
 
-    animateButton() {
-        this.state.animateID = setInterval(() => {
-            // this.setState({ count: this.state.count + 1 });
-            this.state.xVal = this.buttonCurve(300, this.top, 300);
-        }, 1);
-        this.state.stopID = setInterval(this.stopAnimatingButton, 400);
-        // console.log("animating " + this.state.id);
-    }
-
-    stopAnimatingButton() {
-        console.log("done!");
-        clearInterval(this.state.animateID);
-        clearInterval(this.state.stopID);
-        this.state.animateID = 0;
-        this.state.stopID = 0;
-    }
-
-    componentDidMount() {
-        this.animateButton();
-        this.state.xVal = this.buttonCurve(300, this.top, 300);
-        // this.forceUpdate();
-    }
-
-    componentDidUpdate() {
-        // this.state.xVal = this.buttonCurve(300, this.top, 300);
-        if(this.state.animateID == 0) this.animateButton();
+    updateX() {
+        if(this.prevTop != this.top) {
+            this.setState({
+                xVal: this.buttonCurve(300, this.top, 318),
+            });
+            this.prevTop = this.top;
+        }
     }
 
     render() {
         const clickFunction = (e) => {
             this.vidFunc(this.file);
             this.indexFunc(this.state.id);
-            this.animateButton();
-            // this.props.myFunction("5");
-            // alert(this.top);
-            // this.xVal = this.top;
-            // this.forceUpdate();
         };
 
         return <div style={{width: "60%",
@@ -93,7 +70,12 @@ class TAGDReelButton extends Component {
                     if (!el) return;
 
                     // console.log(el.getBoundingClientRect().width); // prints 200px
-                    this.top = el.getBoundingClientRect().top + 25;
+                    // this.top = el.getBoundingClientRect().top + 25;
+                    if(this.interval != 0) clearInterval(this.interval); //surely this will not cause issues later
+                    this.interval = setInterval(() => {
+                        this.top = el.getBoundingClientRect().top;
+                        this.updateX();
+                    }, 10);
       }}
       >
                     <p style={{margin:"auto",color:"black"}}>{this.name}</p>
@@ -111,6 +93,7 @@ class ButtonWheel extends Component {
         this.state = {
             flipped: true,
             index: 0,
+            y: -200,
         };
 
         // this.myFunction = this.myFunction.bind(this);
@@ -126,18 +109,28 @@ class ButtonWheel extends Component {
     //     this.forceUpdate();
     // }
 
-    setIndex(ind) {
-        // alert(this.state.flipped);
-        console.log(ind);
-        this.setState({index: ind});
-        // alert(ind + "  " + this.state.index);
-        // this.forceUpdate();
+    calcYOffIndex(ind) {return ind*-200 - 200;}
+
+    moveY() {
+        let targetY = this.calcYOffIndex(this.state.index);
+        if(targetY > this.state.y) {
+            this.setState({y: this.state.y + 5});
+        } else if(targetY < this.state.y) {
+            this.setState({y: this.state.y - 5});
+        } else {clearInterval(this.yInterval);}
     }
 
-    componentDidMount() {
-        // setInterval(() => {
-        //     this.testFunc();
-        // }, 1000);
+    setIndex(ind) {
+        // alert(this.state.flipped);
+        // console.log(ind);
+        if(ind > (this.state.index + 2)) {console.log("jump to end " + ind + " " + this.state.index);}
+        if(ind < (this.state.index - 1)) {console.log("jump to beginning");}
+        this.setState({index: ind});
+        this.yInterval = setInterval(() => {
+            this.moveY();
+        }, 1);
+        // alert(ind + "  " + this.state.index);
+        // this.forceUpdate();
     }
 
     render() {
@@ -172,6 +165,8 @@ class ButtonWheel extends Component {
             </div>*/
 
             const buttons = [
+                <TAGDReelButton key="t" id={"6"} vidFunc={this.switchFunc} indexFunc={this.setIndex} file={"robo"}   name={"7"}/>,
+                <TAGDReelButton key="s" id={"7"} vidFunc={this.switchFunc} indexFunc={this.setIndex} file={"selva"}   name={"8"}/>,
                 <TAGDReelButton key="0" id={"0"} vidFunc={this.switchFunc} indexFunc={this.setIndex} file={"battle"}   name={"1"}/>,
                 <TAGDReelButton key="1" id={"1"} vidFunc={this.switchFunc} indexFunc={this.setIndex} file={"dead"}   name={"2"}/>,
                 <TAGDReelButton key="2" id={"2"} vidFunc={this.switchFunc} indexFunc={this.setIndex} file={"doom"}   name={"3"}/>,
@@ -180,18 +175,20 @@ class ButtonWheel extends Component {
                 <TAGDReelButton key="5" id={"5"} vidFunc={this.switchFunc} indexFunc={this.setIndex} file={"hoa"}   name={"6"}/>,
                 <TAGDReelButton key="6" id={"6"} vidFunc={this.switchFunc} indexFunc={this.setIndex} file={"robo"}   name={"7"}/>,
                 <TAGDReelButton key="7" id={"7"} vidFunc={this.switchFunc} indexFunc={this.setIndex} file={"selva"}   name={"8"}/>,
+                <TAGDReelButton key="e" id={"0"} vidFunc={this.switchFunc} indexFunc={this.setIndex} file={"battle"}   name={"1"}/>,
+                <TAGDReelButton key="f" id={"1"} vidFunc={this.switchFunc} indexFunc={this.setIndex} file={"dead"}   name={"2"}/>,
             ]
 
             // buttons.sort((a, b) => this.state.flipped ? a.key - b.key : b.key - a.key)
             let sortedButtons = buttons;
-            for(let i = 0; i < this.state.index+1; ++i) {
-                sortedButtons.unshift(sortedButtons.pop());
-            }
+            // for(let i = 0; i < this.state.index+1; ++i) {
+            //     sortedButtons.unshift(sortedButtons.pop());
+            // }
 
     return <div style={clipdiv}>
-        <div style={wheel}>
-            {/* {sortedButtons.map(b => b)} */}
-            <TestButton/>
+        <div style={{position:"relative", top:this.state.y}}>
+            {sortedButtons.map(b => b)}
+            {/* <TestButton/> */}
         </div>
     </div>
     }
@@ -205,6 +202,8 @@ class TestButton extends Component {
 
         this.state = {
             x: 100,
+            y: 0,
+            top: 0,
             count: 0,
             currentTime: Date.now(),
             lastTime: Date.now(),
@@ -212,58 +211,56 @@ class TestButton extends Component {
     }
 
     componentDidMount() {
-        if(this.interval == 0) this.interval = setInterval(() => {
+        if(this.interval == 0) {
+            console.log("exists");
+            this.interval = setInterval(() => {
             // this.setState({ count: this.state.count + 1 });
-            this.updateX();
-        }, 1);
+            // this.updateX();
+        }, 10);} else console.log("exists");
+        
     }
 
     componentWillUnmount() {
         clearInterval(this.interval);
+        clearInterval(this.interval2);
         console.log("cleared!");
     }
 
-    updateX() {
+    updateX(el) {
         // console.log(this.state.count);
-        // this.state.x = 100*Math.sin(this.state.count*0.05) + 100;
         // console.log(this.state.x);
         this.setState({
             currentTime: Date.now(),
             count: this.state.count + (Date.now() - this.state.lastTime),
             lastTime: this.state.currentTime,
-            x: 100*Math.sin(this.state.count*0.05) + 100,
+            y: 100*Math.sin(this.state.count*0.001),
         });
-        // this.forceUpdate();
-    }
 
-    pollX (el) {
-        let nextValue = JSON.stringify(el.getBoundingClientRect());
-        if (nextValue === this.prevValue) {
-            clearInterval(this.handle);
-            console.log(
-            `x stopped changing. final width:`,
-            el.getBoundingClientRect().right
-            );
-        } else {
-            this.prevValue = nextValue;
+        if(this.prevTop != this.top) {
+            this.setState({
+                x: (this.top*this.top)/10000.0,
+            });
+            this.prevTop = this.top;
         }
     }
 
     render() {
         return <div
         style={{display:"block",float:"right",position: "relative",
-            right:this.state.x}}
+            top:this.state.y, right:this.state.x}}
 
             ref={el => {
                 if (!el) return;
-                console.log("initial width", el.getBoundingClientRect().right);
-                let prevValue = JSON.stringify(el.getBoundingClientRect());
-                const start = Date.now();
-                this.handle = setInterval(this.pollX(el), 1);
+                // console.log("top", el.getBoundingClientRect().right);
+                if(this.interval2 != 0) clearInterval(this.interval2); //surely this will not cause issues later
+                this.interval2 = setInterval(() => {
+                    this.top = el.getBoundingClientRect().top;
+                    this.updateX();
+                }, 1);
             }}
         >
             <button style={{width:"500px",height:"500px"}}
-        onClick={() => {alert("gurt");}}>yo
+        onClick={() => {alert(this.state.x);}}>yo
             </button></div>
     }
 }
