@@ -102,7 +102,7 @@ class TAGDReelButton extends Component {
     }
 }
 
-class ButtonWheel extends Component {
+export class ButtonWheel extends Component {
     constructor(props) {
         super(props);
 
@@ -125,7 +125,7 @@ class ButtonWheel extends Component {
         this.endAutoscroll = this.endAutoscroll.bind(this);
         this.clickAll = this.clickAll.bind(this);
 
-        this.buttons = 
+        /*this.buttons = 
             [
                 <TAGDReelButton key="t" id={"-2"} pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
                     file={"dino"}   name={"They All Come Back"}         credits={"Eden Kim"}/>,
@@ -157,7 +157,12 @@ class ButtonWheel extends Component {
                     file={"battle"} name={"Battle Against Time"}        credits={"Andre Martinez, Alberik Ibarra, Kade Melancon, Remzi Konar"}/>,
                 <TAGDReelButton key="f" id={"12"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
                     file={"dead"}   name={"Dead Lead"}                  credits={"Elias Ortiz, Alfredo Castro-Rosas, Jonathan Tregre, Thomas Mikel, Jeremy Carrera"}/>,
-            ];
+            ];*/
+
+        this.buttons = this.props.bs.map((item) => {
+            return <TAGDReelButton key={item.id} id={item.id}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
+                    file={item.file}   name={item.name} credits={item.credits}/>
+        });
         
     }
 
@@ -166,14 +171,24 @@ class ButtonWheel extends Component {
     moveY() {
         let targetY = this.calcYOffIndex(this.state.index);
         let nextY = this.state.y;
-        let speed = 5;
+        let speed = 7;
         if(targetY > this.state.y) {
             nextY = this.state.y + speed;
-            this.setState({y: nextY});
+            if(nextY < targetY) {
+                requestAnimationFrame(() => {this.moveY()});
+                this.setState({y: nextY});
+            } else
+                this.setState({y: targetY});
         } else if(targetY < this.state.y) {
             nextY = this.state.y - speed;
-            this.setState({y: nextY});
-        } else {clearInterval(this.yInterval);}
+            if(nextY > targetY) {
+                requestAnimationFrame(() => {this.moveY()});
+                this.setState({y: nextY});
+            } else
+                this.setState({y: targetY});
+        } else {
+            // clearInterval(this.yInterval);
+        }
 
         if(nextY > 0) {
             nextY -= this.numButtons*150;
@@ -195,9 +210,10 @@ class ButtonWheel extends Component {
     setIndex(ind) {
         ind = parseInt(ind);
         this.setState({index: ind});
-        this.yInterval = setInterval(() => {
-            this.moveY();
-        }, 1);
+        // this.yInterval = setInterval(() => {
+        //     this.moveY();
+        // }, 1);
+        requestAnimationFrame(() => {this.moveY()});
         document.getElementById("name").textContent = this.buttons[(ind%this.numButtons) + 2].props.name;
         document.getElementById("credits").textContent = "Created by " + this.buttons[(ind%this.numButtons) + 2].props.credits;
     }
@@ -291,64 +307,7 @@ class ButtonWheel extends Component {
     }
 }
 
-class TestButton extends Component {
-    constructor(props) {
-        super(props);
-
-        this.interval = 0;
-
-        this.state = {
-            x: 100,
-            y: 0,
-            top: 0,
-            count: 0,
-            currentTime: Date.now(),
-            lastTime: Date.now(),
-        };
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.interval);
-        clearInterval(this.interval2);
-    }
-
-    updateX() {
-        this.setState({
-            currentTime: Date.now(),
-            count: this.state.count + (Date.now() - this.state.lastTime),
-            lastTime: this.state.currentTime,
-            y: 100*Math.sin(this.state.count*0.001),
-        });
-
-        if(this.prevTop != this.top) {
-            this.setState({
-                x: (this.top*this.top)/10000.0,
-            });
-            this.prevTop = this.top;
-        }
-    }
-
-    render() {
-        return <div
-        style={{display:"block",float:"right",position: "relative",
-            top:this.state.y, right:this.state.x}}
-
-            ref={el => {
-                if (!el) return;
-                if(this.interval2 != 0) clearInterval(this.interval2); //surely this will not cause issues later
-                this.interval2 = setInterval(() => {
-                    this.top = el.getBoundingClientRect().top;
-                    this.updateX();
-                }, 1);
-            }}
-        >
-            <button style={{width:"500px",height:"500px"}}
-        onClick={() => {alert(this.state.x);}}>yo
-            </button></div>
-    }
-}
-
-const ReelGlobalStyle = createGlobalStyle`
+export const ReelGlobalStyle = createGlobalStyle`
   body {
     background: rgba(77, 85, 126, 1);
     background-image: url("/assets/tagdbg2.png");
@@ -378,8 +337,26 @@ const TAGDReel = () => {
     const [videoSource, switchVideo] = useState("all");
     // const [autoplaying, changeAutoplay] = useState(true);
 
+    const buttons = [
+        {id:-2, file:"dino",   name:"They All Come Back",          credits:"Eden Kim"},
+        {id:-1, file:"time",   name:"Timeborn",                    credits:"Jacob Gislason"},
+        {id:0,  file:"battle", name:"Battle Against Time",         credits:"Andre Martinez, Alberik Ibarra, Kade Melancon, Remzi Konar"},
+        {id:1,  file:"dead",   name:"Dead Lead",                   credits:"Elias Ortiz, Alfredo Castro-Rosas, Jonathan Tregre, Thomas Mikel, Jeremy Carrera"},
+        {id:2,  file:"doom",   name:"Doomdash",                    credits:"Titan Tillman, Gabriel Lundin, Tristan Seelig"},
+        {id:3,  file:"faeshu", name:"Faeshu",                      credits:"Peter Nguyen"},
+        {id:4,  file:"flush",  name:"Flush with Justice",          credits:"Sriram Gaddam, Seth Pinto, Ilter Ulutas, Elijah Mendoza"},
+        {id:5,  file:"hoa",    name:"Home Owners' Asssassination", credits:"Blake de Armas, Avery Althaus, Benjamin Kumar, Grayson Byczek, Bryceton West"},
+        {id:6,  file:"robo",   name:"Robo-Detective Cable Whip",   credits:"Nathaniel Shipman, Liam Searing, Hugo De Vaz Contreiras, Isabelle Chan Tack"},
+        {id:7,  file:"selva",  name:"Selva",                       credits:"Isaac Lagoy, Jonah Coffelt"},
+        {id:8,  file:"voice",  name:"Faeshu",                      credits:"Rowan Banerjee"},
+        {id:9,  file:"dino",   name:"They All Come Back",          credits:"Eden Kim"},
+        {id:10, file:"time",   name:"Timeborn",                    credits:"Jacob Gislason"},
+        {id:11, file:"battle", name:"Battle Against Time",         credits:"Andre Martinez, Alberik Ibarra, Kade Melancon, Remzi Konar"},
+        {id:12, file:"dead",   name:"Dead Lead",                   credits:"Elias Ortiz, Alfredo Castro-Rosas, Jonathan Tregre, Thomas Mikel, Jeremy Carrera"},
+    ];
+
     const wheels = [
-        <ButtonWheel numButtons={11} switchFunc={switchVideo}/>
+        <ButtonWheel bs={buttons} numButtons={11} switchFunc={switchVideo}/>
     ];
 
     // useEffect(updateAutoplayToggle);
@@ -408,7 +385,7 @@ const TAGDReel = () => {
             <div style={{display:"flex",height:"30vh"}}>
                 <div style={{width:"20%",margin:"auto"}}>
                     <p>Texas Aggie Game Developers</p>
-                    <p>Informational & Jam Theme Reveal Sep. 4th<br/> @ ARCC 207!</p>
+                    <p>Informational & Jam Theme Reveal 1/22<br/> @ ARCC 207!</p>
                 </div>
                 <div style={{width:"55%",margin:"auto"}}>
                     <img style={{width:"45%",margin:"auto"}}src="/assets/tagdlogo.png"/>
