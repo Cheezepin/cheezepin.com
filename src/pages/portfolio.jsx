@@ -25,6 +25,7 @@ import {
   import OvCm from '../components/portfolio_overlays/OvCm';
   import OvCh from '../components/portfolio_overlays/OvCh';
   import OvPm from '../components/portfolio_overlays/OvPm';
+  import OvHaw from '../components/portfolio_overlays/OvHaw';
   
   import "../components/portfolio_overlays/overlays.css"
 
@@ -66,6 +67,11 @@ const Portfolio = () => {
             setOverlay={() => setOverlay("ch")}
         />
         <ProjectButton
+            imgPath = "f3/f3_bttn"
+            bgPath = "f3/f3_bg"
+            setOverlay={() => setOverlay("f3")}
+        />
+        <ProjectButton
             imgPath = "dc/dog_bttn"
             bgPath = "dc/dog_bg"
             setOverlay={() => setOverlay("dc")}
@@ -76,6 +82,11 @@ const Portfolio = () => {
 
         <div style={{alignItems: "center"}}>
         <div style={{alignItems: "center", minHeight:"24vw"}}>
+        <ProjectButton
+            imgPath = "haw/haw_bttn"
+            bgPath = "haw/haw_bg"
+            setOverlay={() => setOverlay("haw")}
+        />
         <ProjectButton
             imgPath = "yctf/yctf_bttn"
             bgPath = "yctf/yctf_bg"
@@ -147,6 +158,7 @@ function ProjectOverlay({overlay, setOverlay}) {
         case "bk":   displayedOverlay = <OvBk   setOverlay={setOverlay}/>; break;
         case "ch":   displayedOverlay = <OvCh   setOverlay={setOverlay}/>; break;
         case "pm":   displayedOverlay = <OvPm   setOverlay={setOverlay}/>; break;
+        case "haw":  displayedOverlay = <OvHaw  setOverlay={setOverlay}/>; break;
     }
     if(displayedOverlay == null) {return;}
     return (

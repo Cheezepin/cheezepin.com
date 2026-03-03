@@ -13,21 +13,24 @@
     z-index: 0;
 
     @media screen and (max-width: 768px) {
-        width: 90vw;
-        height: 67.5vw;
+        width: 44vw;
+        height: 33vw;
     }
 }
 
 .projBtn:hover {
     filter: brightness(50%);
-    margin: -0.25vw;
+    margin-left: -0.25vw;
+    margin-right: -0.25vw;
+    margin-top: -0.75vw;
+    margin-bottom: -0.75vw;
     width: 30vw;
     height: 22.5vw;
     z-index: 400;
 
     @media screen and (max-width: 768px) {
-        width: 90vw;
-        height: 67.5vw;
+        width: 44vw;
+        height: 33vw;
         margin: 0.75vw;
     }
 }
