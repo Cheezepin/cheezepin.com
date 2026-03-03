@@ -125,40 +125,6 @@ export class ButtonWheel extends Component {
         this.endAutoscroll = this.endAutoscroll.bind(this);
         this.clickAll = this.clickAll.bind(this);
 
-        /*this.buttons = 
-            [
-                <TAGDReelButton key="t" id={"-2"} pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"dino"}   name={"They All Come Back"}         credits={"Eden Kim"}/>,
-                <TAGDReelButton key="s" id={"-1"} pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"time"}   name={"Timeborn"}                   credits={"Jacob Gislason"}/>,
-                <TAGDReelButton key="0" id={"0"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"battle"} name={"Battle Against Time"}        credits={"Andre Martinez, Alberik Ibarra, Kade Melancon, Remzi Konar"}/>,
-                <TAGDReelButton key="1" id={"1"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"dead"}   name={"Dead Lead"}                  credits={"Elias Ortiz, Alfredo Castro-Rosas, Jonathan Tregre, Thomas Mikel, Jeremy Carrera"}/>,
-                <TAGDReelButton key="2" id={"2"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"doom"}   name={"Doomdash"}                   credits={"Titan Tillman, Gabriel Lundin, Tristan Seelig"}/>,
-                <TAGDReelButton key="3" id={"3"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"faeshu"} name={"Faeshu"}                     credits={"Peter Nguyen"}/>,
-                <TAGDReelButton key="4" id={"4"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"flush"}  name={"Flush with Justice"}         credits={"Sriram Gaddam, Seth Pinto, Ilter Ulutas, Elijah Mendoza"}/>,
-                <TAGDReelButton key="5" id={"5"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"hoa"}    name={"Home Owners' Asssassination"} credits={"Blake de Armas, Avery Althaus, Benjamin Kumar, Grayson Byczek, Bryceton West"}/>,
-                <TAGDReelButton key="6" id={"6"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"robo"}   name={"Robo-Detective Cable Whip"}  credits={"Nathaniel Shipman, Liam Searing, Hugo De Vaz Contreiras, Isabelle Chan Tack"}/>,
-                <TAGDReelButton key="7" id={"7"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"selva"}  name={"Selva"}                      credits={"Isaac Lagoy, Jonah Coffelt"}/>,
-                <TAGDReelButton key="8" id={"8"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"voice"}   name={"The Voices"}                credits={"Rowan Banerjee"}/>,
-                <TAGDReelButton key="9" id={"9"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"dino"}   name={"They All Come Back"}         credits={"Eden Kim"}/>,
-                <TAGDReelButton key="10" id={"10"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"time"}   name={"Timeborn"}                   credits={"Jacob Gislason"}/>,
-                <TAGDReelButton key="e" id={"11"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"battle"} name={"Battle Against Time"}        credits={"Andre Martinez, Alberik Ibarra, Kade Melancon, Remzi Konar"}/>,
-                <TAGDReelButton key="f" id={"12"}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
-                    file={"dead"}   name={"Dead Lead"}                  credits={"Elias Ortiz, Alfredo Castro-Rosas, Jonathan Tregre, Thomas Mikel, Jeremy Carrera"}/>,
-            ];*/
-
         this.buttons = this.props.bs.map((item) => {
             return <TAGDReelButton key={item.id} id={item.id}  pTop={this.getTop} vidFunc={this.switchFunc} indexFunc={this.forceIndex}
                     file={item.file}   name={item.name} credits={item.credits}/>

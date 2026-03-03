@@ -6,23 +6,23 @@ const TAGDReelF25 = () => {
     // const [autoplaying, changeAutoplay] = useState(true);
 
     const buttons = [
-        {id:-2, file:"dino",   name:"Shen Kuno",              credits:"Peter Nguyen"},
-        {id:-1, file:"time",   name:"What Lies West",         credits:"Elijah Mendoza, Seth Pinto, Sriram Gaddam, Ilter Ultas"},
-        {id:0,  file:"battle", name:"Black Dice",             credits:"Tyler Wilkes, Blaine Muher"},
-        {id:1,  file:"dead",   name:"Coin Action Platformer", credits:"Samuel Espen"},
-        {id:2,  file:"doom",   name:"Crumple Quest",          credits:"Jonah Coffelt, Issac Lagoy, Eden Kim, Hanna Harmon"},
-        {id:3,  file:"faeshu", name:"Dimensional Duel",       credits:"Asher Blevins, Amy Burgess"},
-        {id:4,  file:"flush",  name:"Flip-Off",               credits:"Alfredo Castro-Rosas, Elias Ortiz, Thomas Mikel, Asia Erwin, Ahmed Albsharat"},
-        {id:5,  file:"hoa",    name:"Flippen Flowers",        credits:"Andrew Ward"},
-        {id:6,  file:"robo",   name:"F³",                     credits:"Emily Gonzalez, Jason Lev, Kyle Lev, Karen Lopez, Chi-Chi Zhang"},
-        {id:7,  file:"selva",  name:"Gears of Dissent",       credits:"Jacob Gislason"},
-        {id:8,  file:"voice",  name:"Glorp Ordeal",           credits:"Joe Dootson, Seungbin Ahn"},
-        {id:9,  file:"dino",   name:"Raveyard",               credits:"Avery Althaus, Grayson Byczek, Cole Greinke, Ben Kumar, Amina Monk"},
-        {id:10, file:"time",   name:"See You",                credits:"Mary Anna Barkley, Katherine Barkley, Tran Huynh"},
-        {id:11, file:"battle", name:"Shen Kuno",              credits:"Peter Nguyen"},
-        {id:12, file:"dead",   name:"What Lies West",         credits:"Elijah Mendoza, Seth Pinto, Sriram Gaddam, Ilter Ultas"},
-        {id:13, file:"dino",   name:"Black Dice",             credits:"Tyler Wilkes, Blaine Muher"},
-        {id:14, file:"time",   name:"Coin Action Platformer", credits:"Samuel Espen"},
+        {id:-2, file:"shen",   name:"Shen Kuno",              credits:"Peter Nguyen"},
+        {id:-1, file:"west",   name:"What Lies West",         credits:"Elijah Mendoza, Seth Pinto, Sriram Gaddam, Ilter Ultas"},
+        {id:0,  file:"black",  name:"Black Dice",             credits:"Tyler Wilkes, Blaine Muher"},
+        {id:1,  file:"coin",   name:"Coin Action Platformer", credits:"Samuel Espen"},
+        {id:2,  file:"crump",  name:"Crumple Quest",          credits:"Jonah Coffelt, Issac Lagoy, Eden Kim, Hanna Harmon"},
+        {id:3,  file:"duel",   name:"Dimensional Duel",       credits:"Asher Blevins, Amy Burgess"},
+        {id:4,  file:"flip",   name:"Flip-Off",               credits:"Alfredo Castro-Rosas, Elias Ortiz, Thomas Mikel, Asia Erwin, Ahmed Albsharat"},
+        {id:5,  file:"flower", name:"Flippen Flowers",        credits:"Andrew Ward"},
+        {id:6,  file:"frog",   name:"F³",                     credits:"Emily Gonzalez, Jason Lev, Kyle Lev, Karen Lopez, Chi-Chi Zhang"},
+        {id:7,  file:"gears",  name:"Gears of Dissent",       credits:"Jacob Gislason"},
+        {id:8,  file:"glorp",  name:"Glorp Ordeal",           credits:"Joe Dootson, Seungbin Ahn"},
+        {id:9,  file:"rave",   name:"Raveyard",               credits:"Avery Althaus, Grayson Byczek, Cole Greinke, Ben Kumar, Amina Monk"},
+        {id:10, file:"see",    name:"See You",                credits:"Mary Anna Barkley, Katherine Barkley, Tran Huynh"},
+        {id:11, file:"shen",   name:"Shen Kuno",              credits:"Peter Nguyen"},
+        {id:12, file:"west",   name:"What Lies West",         credits:"Elijah Mendoza, Seth Pinto, Sriram Gaddam, Ilter Ultas"},
+        {id:13, file:"black",  name:"Black Dice",             credits:"Tyler Wilkes, Blaine Muher"},
+        {id:14, file:"coin",   name:"Coin Action Platformer", credits:"Samuel Espen"},
     ];
 
     const wheels = [
@@ -40,7 +40,7 @@ const TAGDReelF25 = () => {
         changeAutoplay(document.getElementById("autoplayToggle").checked);
     }
 
-    let videoPath = `/assets/videos/${videoSource}.mp4`;
+    let videoPath = `/assets/videos/f25/${videoSource}.mp4`;
     return (
         <div style={{
             justifyContent: 'centre',
